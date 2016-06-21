@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2016 a las 17:30:08
+-- Tiempo de generación: 21-06-2016 a las 17:45:22
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -99,10 +99,6 @@ INSERT INTO `tbproveedor` (`idproveedor`, `nombre`, `contacto`, `telefono`, `tel
 CREATE TABLE IF NOT EXISTS `tbsalida` (
   `idventa` int(11) NOT NULL,
   `idcodigo` int(11) NOT NULL,
-  `referencia` varchar(100) NOT NULL,
-  `descripcion` varchar(100) NOT NULL,
-  `marca` varchar(50) NOT NULL,
-  `tipo` varchar(50) NOT NULL,
   `precio` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `subtotal` int(11) NOT NULL
@@ -112,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `tbsalida` (
 -- Volcado de datos para la tabla `tbsalida`
 --
 
-INSERT INTO `tbsalida` (`idventa`, `idcodigo`, `referencia`, `descripcion`, `marca`, `tipo`, `precio`, `cantidad`, `subtotal`) VALUES
-(1, 1, 'sk - 300 mini', 'display', 'sony', 'original', 10000, 2, 20000);
+INSERT INTO `tbsalida` (`idventa`, `idcodigo`, `precio`, `cantidad`, `subtotal`) VALUES
+(1, 1, 10000, 2, 20000);
 
 -- --------------------------------------------------------
 
@@ -147,15 +143,16 @@ CREATE TABLE IF NOT EXISTS `tbventa` (
   `idventa` int(11) NOT NULL,
   `fechasalida` date NOT NULL,
   `idvendedor` int(11) NOT NULL,
-  `idcomprador` int(11) NOT NULL
+  `idcomprador` int(11) NOT NULL,
+  `total` int(11) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbventa`
 --
 
-INSERT INTO `tbventa` (`idventa`, `fechasalida`, `idvendedor`, `idcomprador`) VALUES
-(1, '2016-06-21', 54321, 1);
+INSERT INTO `tbventa` (`idventa`, `fechasalida`, `idvendedor`, `idcomprador`, `total`) VALUES
+(1, '2016-06-21', 54321, 1, 0);
 
 --
 -- Índices para tablas volcadas
