@@ -24,12 +24,12 @@
    	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email" maxlength="50">          
+   	        <label for="">direccion:</label>
+   	        <input type="direccion" class="form-control" name="direccion" maxlength="50">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Descripcion:</label>
-   	            <select name="descripcion" class="form-control" required>
+   	        <label for=""><span style="color:red;">* </span>email:</label>
+   	            <select name="email" class="form-control" required>
                     <option value="">Seleccione una Opción</option>
                     <option value="1" selected>Proveedor</option>
                     <option value="2">Local</option>
@@ -53,8 +53,8 @@
 				<th>Contacto</th>
 				<th>Telefono proveedor</th>
 				<th>Telefono contacto</th>
-				<th>Email</th>
-				<th>Descripcion</th>
+				<th>direccion</th>
+				<th>email</th>
 				<th>Edición</th>
           		</tr>
        		</thead>
@@ -68,8 +68,8 @@
 					<td data-title='Contacto'><?= $consultaproveedor[$i]['contacto'] ?></td>
 					<td data-title='Telefono proveedor'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono']) ?></td>
 					<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
-					<td data-title='Email'><?= $consultaproveedor[$i]['email'] ?></td>
-					<td data-title='Descripcion'><?= $consultaproveedor[$i]['descripcion'] ?></td>
+					<td data-title='direccion'><?= $consultaproveedor[$i]['direccion'] ?></td>
+					<td data-title='email'><?= $consultaproveedor[$i]['email'] ?></td>
                     <td data-title='Edición'><a href="home.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbproveedor
 		 */
-		function insertar_proveedor($idproveedor, $nombre, $contacto, $telefono, $telefono2, $email, $descripcion)
+		function insertar_proveedor($idproveedor, $nombre, $contacto, $telefono, $telefono2, $direccion, $email)
 		{
-			$sql = "INSERT INTO tbproveedor (idproveedor, nombre, contacto, telefono, telefono2, email, descripcion)
-						VALUES ('".$idproveedor."','".$nombre."','".$contacto."','".$telefono."','".$telefono2."','".$email."','".$descripcion."');";
+			$sql = "INSERT INTO tbproveedor (idproveedor, nombre, contacto, telefono, telefono2, direccion, email)
+						VALUES ('".$idproveedor."','".$nombre."','".$contacto."','".$telefono."','".$telefono2."','".$direccion."','".$email."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbproveedor
 		 */
-		function  actualizar_proveedor($idproveedor, $nombre, $contacto, $telefono, $telefono2, $email, $descripcion)
+		function  actualizar_proveedor($idproveedor, $nombre, $contacto, $telefono, $telefono2, $direccion, $email)
 		{
-			$sql = "UPDATE tbproveedor SET nombre = '".$nombre."',contacto = '".$contacto."',telefono = '".$telefono."',telefono2 = '".$telefono2."',email = '".$email."',descripcion = '".$descripcion."' WHERE idproveedor = '".$idproveedor."';";
+			$sql = "UPDATE tbproveedor SET nombre = '".$nombre."',contacto = '".$contacto."',telefono = '".$telefono."',telefono2 = '".$telefono2."',direccion = '".$direccion."',email = '".$email."' WHERE idproveedor = '".$idproveedor."';";
 			$this -> cons($sql);
 		}
 		/*

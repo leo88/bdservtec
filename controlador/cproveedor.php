@@ -10,8 +10,8 @@
 	$contacto      = isset($_POST['contacto']) ? $_POST['contacto'] : NULL;
     $telefono      = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;
     $telefono2     = isset($_POST['telefono2']) ? $_POST['telefono2'] : NULL;
+    $direccion     = isset($_POST['direccion']) ? $_POST['direccion'] : NULL;
     $email         = isset($_POST['email']) ? $_POST['email'] : NULL;
-    $descripcion   = isset($_POST['descripcion']) ? $_POST['descripcion'] : NULL;
 	$idproveeli    = isset($_POST['idproveeli']) ? $_POST['idproveeli'] : NULL;
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idprovee      = isset($_GET['id']) ? $_GET['id'] : NULL;	
@@ -25,17 +25,17 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($idproveedor&& $nombre && $descripcion && !$actu) 
+	if ($idproveedor&& $nombre && $email && !$actu) 
 	{
         
-		$proveedor->insertar_proveedor($idproveedor,$newName,$newContac,$telefono,$telefono2,$email,$descripcion);
+		$proveedor->insertar_proveedor($idproveedor,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
-	if ($idproveedit && $nombre && $descripcion && $actu) 
+	if ($idproveedit && $nombre && $email && $actu) 
 	{
-		$proveedor->actualizar_proveedor($idproveedit,$newName,$newContac,$telefono,$telefono2,$email,$descripcion);
+		$proveedor->actualizar_proveedor($idproveedit,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
 	}
 	/*
 		Comprobar el id para editar ese unico registro
