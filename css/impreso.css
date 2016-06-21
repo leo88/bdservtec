@@ -1,0 +1,127 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#logo {
+    font-size: 1cm;
+    color: #000;
+    width: 7cm;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-style: dashed;    
+    border-bottom-width: 1.8px;
+    font-size: 36px;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: bold;
+}
+#logob {
+    font-size: 0.32cm;
+    color: #000;    
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'BenchNine', sans-serif;
+}
+#encabezado {
+    font-size: 14px;    
+	width: 7cm;	
+    border-bottom-style: double; 
+    border-bottom-width: 4px;
+    font-family: 'BenchNine', sans-serif;
+}
+#encabezado th {
+	font-size: 16px;	
+	padding: 4px;	
+	color: #000;
+    text-align: center;
+}
+#encabezado td {
+    font-weight: bold;
+    font-size: 16px;
+	padding: 4px;	
+	color: #000;
+}
+#recibo {
+    font-size: 16px;
+	background: #fff;
+	width: 7cm;
+	border-collapse: collapse; 
+    font-family: 'BenchNine', sans-serif;
+}
+#recibo th {
+	font-size: 16px;
+	color: #000;
+	padding: 10px 8px;	
+    text-align: center;
+    border-bottom-style: double; 
+    border-bottom-width: 4px;
+}
+#recibo td {
+    font-size: 16px;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+	padding: 6px 8px;
+    text-align: center;
+}
+#der{
+    text-align: right;
+    padding-right: 0px;
+}
+#nit {
+    text-align: center; 
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+#clausula {
+    width: 7cm;
+    text-align: justify;
+    font-size: 8px;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+#pie {
+    padding-top: 6px;
+    width: 7cm;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'BenchNine', sans-serif;
+}
+#margen {
+    margin-left: 0px;
+    padding-right: 0.8cm;
+}
+#boton {
+    margin-top: 30px;
+}
+#barra1{
+    margin-left: 0px;
+    text-align: left;
+}
+.barra2{
+    width: 80px;
+}
+.barra3{
+    width: 80px;
+}
+.barra4{
+    margin-left: 10px;
+}
+
+@media print{
+    #boton {   
+        visibility: hidden;
+    }
+    #prueba {   
+        visibility: hidden;
+    }
+    #prueba2 {   
+        visibility: hidden;
+    }
+   #pin {
+        border: 1px solid #000;
+        width: 230px;
+        height: 30px;        
+    }
+}

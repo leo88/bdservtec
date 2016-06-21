@@ -56,6 +56,7 @@
       						<li><a href="index.php?pag=26">Venta por Producto</a></li>
       						<li><a href="index.php?pag=24">Ventas</a></li>
                   <li><a href="index.php?pag=44">Movimiento</a></li>
+                </ul>
       				</li>
       				<li class="dropdown" id="st">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Servicio Técnico
