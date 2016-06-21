@@ -95,7 +95,6 @@
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong>User</strong></small></div>
       				<li><a href="index.php?pag=33"><span class="glyphicon glyphicon-user"></span></a></li>
-      				<?php endif ?>
      				<li><a href="vista/vsalir.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
    				</ul>
    			</div>
@@ -105,7 +104,7 @@
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
       if($page == null){
-          include("home.php");
+          include("vista/vhome.php");
       }
 			if ($page == 2) 
 			{
