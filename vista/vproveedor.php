@@ -16,7 +16,7 @@
    	        <input type="text" class="form-control" name="contacto" maxlength="50">        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Telefono proveedor:</label>
+   	        <label for=""><span style="color:red;">* </span>Telefono proveedor:</label>
    	        <input type="number" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
@@ -24,17 +24,14 @@
    	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">direccion:</label>
-   	        <input type="direccion" class="form-control" name="direccion" maxlength="50">          
+   	        <label for="">Direccion:</label>
+   	        <input type="text" class="form-control" name="direccion" maxlength="50">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>email:</label>
-   	            <select name="email" class="form-control" required>
-                    <option value="">Seleccione una Opción</option>
-                    <option value="1" selected>Proveedor</option>
-                    <option value="2">Local</option>
-            	</select>        
+   	        <label for="">Email:</label>
+   	        <input type="email" class="form-control" name="email" maxlength="90">          
 		</div>
+		
 			<div class="form-group col-md-6"> <br>          		
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
       		</div>
