@@ -25,7 +25,7 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($idproveedor&& $nombre && $email && !$actu) 
+	if ($idproveedor&& $nombre && $telefono && !$actu) 
 	{
         
 		$proveedor->insertar_proveedor($idproveedor,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
@@ -33,7 +33,7 @@
 	/*
 		Comprobacion datos para actualizar
 	*/
-	if ($idproveedit && $nombre && $email && $actu) 
+	if ($idproveedit && $nombre && $telefono && $actu) 
 	{
 		$proveedor->actualizar_proveedor($idproveedit,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
 	}
