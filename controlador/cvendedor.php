@@ -18,9 +18,10 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName = $vendedor->sentence_case($nombre);
-	$newContac = $vendedor->sentence_case($direccion);
-
+	//$newName = $vendedor->sentence_case($nombre);
+	//$newContac = $vendedor->sentence_case($direccion);
+	$newName = $vendedor->sentence_case_test($nombre);
+	$newContac = $vendedor->sentence_case_test($direccion);
 	/*
 		Comprobacion datos para insertar
 	*/

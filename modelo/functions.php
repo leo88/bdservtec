@@ -53,5 +53,10 @@
                     $sentence.' '; 
             } 
             return trim($new_string); 
-        } 
+        }
+        function sentence_case_test($string) 
+        { 
+            $foo = ucwords(strtolower($string));
+            return $foo; 
+        }
     }

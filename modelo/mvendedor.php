@@ -15,7 +15,7 @@
 		function insertar_vendedor($idvendedor, $nombre, $direccion, $telefono, $email, $estado)
 		{
 			$sql = "INSERT INTO tbvendedor (idvendedor, nombre, direccion, telefono, email, estado)
-						VALUES ('".$idvendedor."','".$nombre."','".$direccion."','".$telefono."','".$email."','".$estado."');";
+						VALUES ('$idvendedor','$nombre','$direccion','$telefono','$email','$estado');";
 			$this -> cons($sql);
 		}
 		/*
@@ -23,7 +23,7 @@
 		 */
 		function  actualizar_vendedor($idvendedor, $nombre, $direccion, $telefono, $email, $estado)
 		{
-			$sql = "UPDATE tbvendedor SET nombre = '".$nombre."',direccion = '".$direccion."',telefono = '".$telefono."',email = '".$email."',estado = '".$estado."' WHERE idvendedor = '".$idvendedor."';";
+			$sql = "UPDATE tbvendedor SET nombre = '$nombre',direccion = '$direccion',telefono = '$telefono',email = '$email',estado = '$estado' WHERE idvendedor = '$idvendedor';";
 			$this -> cons($sql);
 		}
 		/*
