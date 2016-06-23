@@ -4,7 +4,7 @@
 
 	$comprador = new Mcomprador();
 
-	$idcompradoredit   = isset($_POST['idcomprador']) ? $_POST['idcomprador'] : NULL;
+	$idcompradoredit   = isset($_POST['idcompra']) ? $_POST['idcompra'] : NULL;
 	$nombre      	   = isset($_POST['nombre']) ? $_POST['nombre'] : NULL;
 	$detalle           = isset($_POST['detalle']) ? $_POST['detalle'] : NULL;
     $telefono          = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;

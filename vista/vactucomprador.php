@@ -4,7 +4,7 @@
 <?php include("controlador/ccomprador.php"); ?>
 	<div class="eti">Editar comprador</div>
 
-	<form action="index.php?pag=6&id=<?= $idcomprador?>" method="POST">
+	<form action="index.php?pag=6&id=<?= $idcompra?>" method="POST">
 		<div class="form-group col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Nombre:</label>
             <input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre'] ?>" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>

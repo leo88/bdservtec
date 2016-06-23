@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2016 a las 18:04:00
+-- Tiempo de generación: 23-06-2016 a las 18:27:05
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -29,15 +29,22 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `tbcomprador` (
   `idcomprador` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `detalle` enum('Cliente','Servicio tecnico','Intermediario') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `detalle` enum('Cliente','Servicio tecnico','Intermediario') NOT NULL,
+  `telefono` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbcomprador`
 --
 
-INSERT INTO `tbcomprador` (`idcomprador`, `nombre`, `detalle`) VALUES
-(1, 'Dario Sanchez', 'Cliente');
+INSERT INTO `tbcomprador` (`idcomprador`, `nombre`, `detalle`, `telefono`) VALUES
+(1, 'carlos lopez', '', 'Cliente'),
+(2, 'carlos lopez', '', 'Cliente'),
+(3, 'carlos lopez', '', 'Cliente'),
+(4, 'carlos lopez', '', 'Cliente'),
+(5, 'carlos lopez', '', 'Cliente'),
+(6, 'carlos lopez', '', 'Cliente'),
+(7, 'carlos lopez', '', 'Cliente');
 
 -- --------------------------------------------------------
 
@@ -88,7 +95,10 @@ CREATE TABLE IF NOT EXISTS `tbproveedor` (
 --
 
 INSERT INTO `tbproveedor` (`idproveedor`, `nombre`, `contacto`, `telefono`, `telefono2`, `direccion`, `email`) VALUES
-(12345, 'Tecnoinsumos', 'Diana Parez', '8675234', '3126548709', 'Cra 5 # 23', 'tecnoinsumos@email.com');
+(12345, 'Tecnoinsumos', 'Diana Parez', '8675234', '3126548709', 'Cra 5 # 23', 'tecnoinsumos@email.com'),
+(5555555, 'Raul  Castaã±eda', '', '3465123', '', 'Cra 3 # 115', ''),
+(777777777, 'Insumos  Sandra', 'Sandra', '8888888', '', '', ''),
+(2147483647, 'Zxczxczxczx', '', '435345345345', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -202,7 +212,7 @@ ALTER TABLE `tbventa`
 -- AUTO_INCREMENT de la tabla `tbcomprador`
 --
 ALTER TABLE `tbcomprador`
-  MODIFY `idcomprador` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idcomprador` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `tbproducto`
 --
@@ -218,10 +228,10 @@ ALTER TABLE `tbventa`
 --
 
 --
--- Filtros para la tabla `tbproveedor`
+-- Filtros para la tabla `tbproducto`
 --
-ALTER TABLE `tbproveedor`
-ADD CONSTRAINT `tbproveedor_ibfk_1` FOREIGN KEY (`idproveedor`) REFERENCES `tbproducto` (`idproveedor`) ON UPDATE CASCADE;
+ALTER TABLE `tbproducto`
+ADD CONSTRAINT `tbproducto_ibfk_1` FOREIGN KEY (`idproveedor`) REFERENCES `tbproveedor` (`idproveedor`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbsalida`
