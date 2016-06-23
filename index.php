@@ -43,7 +43,7 @@
       						<li><a href="index.php?pag=2">Proveedor</a></li>
       						<li><a href="index.php?pag=4">Vendedor</a></li>
       						<li><a href="index.php?pag=6">Comprador</a></li>
-      						<li><a href="index.php?pag=8">Recargas</a></li>
+      						<li><a href="index.php?pag=8">producto</a></li>
       						<li><a href="index.php?pag=10">Ingresos y Egresos varios</a></li>
       						<li><a href="index.php?pag=12">Clientes</a></li>
       					</ul>
@@ -133,11 +133,11 @@
 			}
             if ($page == 8) 
 			{
-                include("vista/vactuproveedor.php");
+                include("vista/vproducto.php");
 			}
             if ($page == 9) 
 			{
-                include("vista/vempleado.php");
+                include("vista/vactuproducto.php");
 			}
             if ($page == 10) 
 			{
