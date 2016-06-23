@@ -21,9 +21,9 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbcomprador
 		 */
-		function  actualizar_comprador($idcomprador,$nombre,$telefono)
+		function  actualizar_comprador($idcomprador,$nombre,$detalle,$telefono)
 		{
-			$sql = "UPDATE tbcomprador SET nombre = '".$nombre."',detalle = '".$detalle."',telefono = '".$telefono."';";
+			$sql = "UPDATE tbcomprador SET nombre = '".$nombre."',detalle = '".$detalle."',telefono = '".$telefono."' WHERE idcomprador = '".$idcomprador."';";
 			$this -> cons($sql);
 		}
 		/*
