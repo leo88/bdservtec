@@ -142,7 +142,7 @@
 			}
             if ($page == 10) 
 			{
-                include("vista/vvente.php");
+                include("vista/vventa.php");
 			}
              if ($page == 11) 
 			{

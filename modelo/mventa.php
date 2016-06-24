@@ -49,35 +49,35 @@
 			return $this -> SeleccionDatos($sql);
 		}
 		 /*
-		 	Función para la seleccion de la tabla fechasalida
+		 	Función para la seleccion de la tabla comprador
 		 */
-		function sel_fechasalida()        
+		function sel_comprador()        
 		{
-            $sql = "SELECT * FROM `tbfechasalida`";
+            $sql = "SELECT * FROM `tbcomprador`";
             return $this->SeleccionDatos($sql);
         }
         /*
-		 	Función para la seleccion especifica de los datos de la tabla fechasalida
+		 	Función para la seleccion especifica de los datos de la tabla comprador
 		 */
-		function sel_fechasalida1($idfechasalida)
+		function sel_comprador1($idcomprador)
 		{
-			$sql = "SELECT * FROM tbfechasalida WHERE idfechasalida='".$idfechasalida."';";
+			$sql = "SELECT * FROM tbfechasalida WHERE idcomprador='".$idcomprador."';";
 			return $this->SeleccionDatos($sql);
 		}
 		 /*
 		 	Función para la seleccion de la tabla idcomprador
 		 */
-		function sel_idcomprador()        
+		function sel_idvendedor()        
 		{
-            $sql = "SELECT * FROM `tbidcomprador`";
+            $sql = "SELECT * FROM `tbvendedor`";
             return $this->SeleccionDatos($sql);
         }
         /*
 		 	Función para la seleccion especifica de los datos de la tabla idcomprador
 		 */
-		function sel_idcomprador1($idcomprador)
+		function sel_idvendedor1($idvendedor)
 		{
-			$sql = "SELECT * FROM tbidcomprador WHERE idcomprador='".$idcomprador."';";
+			$sql = "SELECT * FROM tbvendedor WHERE idvendedor='".$idvendedor."';";
 			return $this->SeleccionDatos($sql);
 		}
 
