@@ -12,7 +12,7 @@
 		 */
 		function insertar_venta($fechasalida, $idvendedor, $idcomprador, $total)
 		{
-			$sql = "INSERT INTO tbventa (idfechasalida, idvendedor, idcomprador, total)
+			$sql = "INSERT INTO tbventa (fechasalida, idvendedor, idcomprador, total)
 						VALUES ('".$fechasalida."','".$idvendedor."','".$idcomprador."','".$total."');";
 			$this -> cons($sql);
 		}
@@ -21,7 +21,7 @@
 		 */
 		function  actualizar_venta($idventa, $fechasalida, $idvendedor, $idcomprador,$total)
 		{
-			$sql = "UPDATE tbventa SET idfechasalida = '".$fechasalida."',idvendedor = '".$idvendedor."',idcomprador = '".$idcomprador."',total = '".$total."' WHERE idventa = '".$idventa."';";
+			$sql = "UPDATE tbventa SET fechasalida = '".$fechasalida."',idvendedor = '".$idvendedor."',idcomprador = '".$idcomprador."',total = '".$total."' WHERE idventa = '".$idventa."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -51,7 +51,7 @@
 		 /*
 		 	Función para la seleccion de la tabla comprador
 		 */
-		function sel_comprador()        
+		function sel_idcomprador()        
 		{
             $sql = "SELECT * FROM `tbcomprador`";
             return $this->SeleccionDatos($sql);
@@ -59,9 +59,9 @@
         /*
 		 	Función para la seleccion especifica de los datos de la tabla comprador
 		 */
-		function sel_comprador1($idcomprador)
+		function sel_idcomprador1($idcomprador)
 		{
-			$sql = "SELECT * FROM tbfechasalida WHERE idcomprador='".$idcomprador."';";
+			$sql = "SELECT * FROM tbcomprador WHERE idcomprador='".$idcomprador."';";			
 			return $this->SeleccionDatos($sql);
 		}
 		 /*

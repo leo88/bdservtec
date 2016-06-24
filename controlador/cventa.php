@@ -16,7 +16,7 @@
 	/*
 		Variables para traer los datos de los desplegables
 	*/
-	$fechasalida2	= $venta->sel_fechasalida();
+	$idcomprador2	= $venta->sel_idcomprador();
 	$idvendedor2	= $venta->sel_idvendedor();
 
 	/*

@@ -13,10 +13,10 @@
        
        <div class="form-group campo">
            <label for=""><span style="color:red;">* </span>vendedor:</label> 
-            <select name="idvendedor" class="form-control" >
+            <select name="idvendedor" class="chzn-select form-control" >
 				<option value=0>Seleccione vendedor</option>
-				<?php for($j=0;$j<count($vendedor2);$j++): ?>
-					<option value="<?= $vendedor2[$j]['idvendedor'] ?>"><?= $vendedor2[$j]['nombre'] ?></option>
+				<?php for($j=0;$j<count($idvendedor2);$j++): ?>
+					<option value="<?= $idvendedor2[$j]['idvendedor'] ?>"><?= $idvendedor2[$j]['nombre'] ?></option>
 				<?php endfor; ?>
 			</select>           
 		</div>
@@ -25,8 +25,8 @@
             <label for=""><span style="color:red;">* </span>Comprador:</label><br> 
             <select name="idcomprador" class="chzn-select form-control" >
 				<option value=0>Seleccione comprador</option>
-				<?php for($j=0;$j<count($comprador2);$j++): ?>
-					<option value="<?= $comprador2[$j]['idcomprador'] ?>"><?= $comprador2[$j]['nombre'] ?></option>
+				<?php for($j=0;$j<count($idcomprador2);$j++): ?>
+					<option value="<?= $idcomprador2[$j]['idcomprador'] ?>"><?= $idcomprador2[$j]['nombre'] ?></option>
 				<?php endfor; ?>
 			</select>      
 		</div>	
@@ -58,9 +58,9 @@
 			</tr>
 		</thead>
 		<tbody>
-				<?php for($j=0;$j<count($consultaventa);$j++): 
-				$comprador1 	= $venta->sel_comprador1($consultaventa[$j]['idcomprador']);
-				$vendedor1 	= $venta->sel_vendedor1($consultaventa[$j]['idvendedor']);
+				<?php for($j=0;$j<count($consultaventa);$j++): 				
+				$vendedor1 	= $venta->sel_idvendedor1($consultaventa[$j]['idvendedor']);
+                $comprador1   = $venta->sel_idcomprador1($consultaventa[$j]['idcomprador']);
 			?>
 				<tr>
 					<td><?= $consultaventa[$j]['idventa'] ?></td>
