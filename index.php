@@ -45,7 +45,7 @@
       						<li><a href="index.php?pag=4">Vendedor</a></li>
       						<li><a href="index.php?pag=6">Comprador</a></li>
       						<li><a href="index.php?pag=8">producto</a></li>
-      						<li><a href="index.php?pag=10">Ingresos y Egresos varios</a></li>
+      						<li><a href="index.php?pag=10">Venta</a></li>
       						<li><a href="index.php?pag=12">Clientes</a></li>
       					</ul>
       				</li>

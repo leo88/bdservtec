@@ -13,20 +13,25 @@
 			</select> 
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Nombre Completo:</label>
-   	        <input type="text" class="form-control" name="nombre" pattern="[A-z ]{2,100}" title="Solo se permiten letras máximo 100 caracteres" required>        
+   	        <label for=""><span style="color:red;">* </span>Referencia:</label>
+   	        <input type="text" class="form-control" name="referencia" maxlength="100" required>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Direccion residencia:</label>
-   	        <input type="text" class="form-control" name="direccion" maxlength="100">        
+   	        <label for=""><span style="color:red;">* </span>Descripción:</label>
+   	        <textarea name="descripcion" rows="1" cols="25" class="form-control" maxlength="100" required> </textarea>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Teléfono:</label>
-   	        <input type="text" class="form-control" name="telefono" pattern="[0-9]{7,10}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 10 caracteres" required>          
+   	        <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
+   	        <select name="tipo" class="form-control" required>
+                <option value="">Seleccione una Opción</option>
+                <option value="1" selected>Original</option>
+                <option value="2">Generico</option>
+                <option value="3">Otra</option>
+           	</select>           
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email" maxlength="100">          
+   	        <label for=""><span style="color:red;">* </span>Marca:</label>
+   	        <input type="text" class="form-control" name="marca" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Estado:</label>
