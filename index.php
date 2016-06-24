@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
+  <?php date_default_timezone_set('America/Bogota'); ?>
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>  	
   <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
@@ -141,11 +142,11 @@
 			}
             if ($page == 10) 
 			{
-                include("vista/vactuempleado.php");
+                include("vista/vvente.php");
 			}
              if ($page == 11) 
 			{
-                include("vista/votros.php");
+                include("vista/vactuventa.php");
 			}
             if ($page == 12) 
 			{
