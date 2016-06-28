@@ -1,7 +1,7 @@
 <?php
 
-	include_once 'controlador/conexion.php';
-	include_once 'functions.php';
+	include 'controlador/conexion.php';
+	include 'functions.php';
 
 	class Mventa extends Funciones
 	{
@@ -37,7 +37,7 @@
 		 */
 		function consultar_venta()
 		{
-			$sql = "SELECT * FROM tbventa ORDER BY idventa DESC LIMIT 1";
+			$sql = "SELECT * FROM tbventa ORDER BY idventa";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

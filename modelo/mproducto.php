@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include 'controlador/conexion.php';
+	include 'functions.php';
 
 	class Mproducto extends Funciones
 	{

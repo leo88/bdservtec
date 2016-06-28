@@ -1,13 +1,13 @@
 <?php
 	
-	include('modelo/mventa.php');
+	include 'modelo/mventa.php';
 
 	$venta = new Mventa();
 
 	$idventaedit 	 = isset($_POST['numero_venta']) ? $_POST['numero_venta'] : NULL;	
 	$fechasalida     = isset($_POST['fechasalida']) ? $_POST['fechasalida'] : NULL;
-	$idcomprador     = isset($_POST['idcomprador']) ? $_POST['idcomprador'] : NULL;
 	$idvendedor      = isset($_POST['idvendedor']) ? $_POST['idvendedor'] : NULL;
+	$idcomprador     = isset($_POST['idcomprador']) ? $_POST['idcomprador'] : NULL;
     $total           = isset($_POST['total']) ? $_POST['total'] : NULL;
 	//$idventaeli 	 = isset($_POST['idventaeli']) ? $_POST['idventaeli'] : NULL;
 	$actu            = isset($_POST['actu']) ? $_POST['actu'] : NULL;
@@ -25,14 +25,14 @@
 	if ($fechasalida && $idcomprador && $idvendedor && !$actu) 
 	{
         
-		$venta->insertar_venta($fechasalida, $idcomprador, $idvendedor, $total);
+		$venta->insertar_venta($fechasalida, $idvendedor, $idcomprador, $total);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idventaedit && $fechasalida && $idcomprador && $idvendedor && $actu) 
 	{
-		$venta->actualizar_venta($idventaedit, $fechasalida, $idcomprador, $idvendedor, $total);
+		$venta->actualizar_venta($idventaedit, $fechasalida, $idvendedor, $idcomprador, $total);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

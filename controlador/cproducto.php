@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mproducto.php');
+	include 'modelo/mproducto.php';
 
 	$producto = new Mproducto();
 

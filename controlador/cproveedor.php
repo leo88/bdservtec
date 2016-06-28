@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mproveedor.php');
+	include 'modelo/mproveedor.php';
 
 	$proveedor = new Mproveedor();
 
