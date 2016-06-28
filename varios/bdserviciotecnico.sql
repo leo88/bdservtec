@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2016 a las 18:27:05
+-- Tiempo de generación: 28-06-2016 a las 15:56:11
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -38,13 +38,10 @@ CREATE TABLE IF NOT EXISTS `tbcomprador` (
 --
 
 INSERT INTO `tbcomprador` (`idcomprador`, `nombre`, `detalle`, `telefono`) VALUES
-(1, 'carlos lopez', '', 'Cliente'),
-(2, 'carlos lopez', '', 'Cliente'),
-(3, 'carlos lopez', '', 'Cliente'),
-(4, 'carlos lopez', '', 'Cliente'),
-(5, 'carlos lopez', '', 'Cliente'),
-(6, 'carlos lopez', '', 'Cliente'),
-(7, 'carlos lopez', '', 'Cliente');
+(1, 'Andres Torres', 'Cliente', '36412563'),
+(5, 'Andrea', 'Cliente', '5345345'),
+(6, 'insumos abc', 'Intermediario', ''),
+(7, 'carlos lopez', 'Servicio tecnico', '234234234');
 
 -- --------------------------------------------------------
 
@@ -65,14 +62,15 @@ CREATE TABLE IF NOT EXISTS `tbproducto` (
   `subtotal` int(11) NOT NULL COMMENT 'cantidad por costo',
   `precio` int(11) NOT NULL COMMENT 'valor sugerido de venta',
   `ubicacion` varchar(60) NOT NULL COMMENT 'donde se encuentra el producto'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbproducto`
 --
 
 INSERT INTO `tbproducto` (`idcodigo`, `idproveedor`, `fechaingreso`, `referencia`, `descripcion`, `tipo`, `marca`, `cantidad`, `costo`, `subtotal`, `precio`, `ubicacion`) VALUES
-(1, 12345, '2016-06-20', 'sk - 300 mini', 'display', 'Original', 'sony', 12, 8000, 96000, 10000, 'estante 4');
+(1, 12345, '2016-06-20', 'sk - 300 mini', 'display', 'Original', 'sony', 12, 8000, 96000, 10000, 'estante 4'),
+(2, 5555555, '2016-06-28', 'xa 300 mini', 'tablet', 'Generico', 'Sony', 12, 220000, 2640000, 250000, 'estante 4');
 
 -- --------------------------------------------------------
 
@@ -155,14 +153,15 @@ CREATE TABLE IF NOT EXISTS `tbventa` (
   `idvendedor` int(11) NOT NULL,
   `idcomprador` int(11) NOT NULL,
   `total` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbventa`
 --
 
 INSERT INTO `tbventa` (`idventa`, `fechasalida`, `idvendedor`, `idcomprador`, `total`) VALUES
-(1, '2016-06-21', 54321, 1, 0);
+(1, '2016-06-21', 54321, 1, 0),
+(5, '2016-06-27', 54321, 6, 34000);
 
 --
 -- Índices para tablas volcadas
@@ -217,12 +216,12 @@ ALTER TABLE `tbcomprador`
 -- AUTO_INCREMENT de la tabla `tbproducto`
 --
 ALTER TABLE `tbproducto`
-  MODIFY `idcodigo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Codigo de barras',AUTO_INCREMENT=2;
+  MODIFY `idcodigo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Codigo de barras',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tbventa`
 --
 ALTER TABLE `tbventa`
-  MODIFY `idventa` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idventa` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- Restricciones para tablas volcadas
 --
