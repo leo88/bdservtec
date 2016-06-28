@@ -18,7 +18,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Descripción:</label>
-   	        <textarea name="descripcion" rows="1" cols="25" class="form-control" maxlength="100" required> </textarea>        
+   	        <textarea name="descripcion" rows="1" cols="25" class="form-control"  minlength="1" maxlength="100" required></textarea>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
@@ -31,53 +31,79 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Marca:</label>
-   	        <input type="text" class="form-control" name="marca" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres">          
+   	        <input type="text" class="form-control" name="marca" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Estado:</label>
-   	            <select name="estado" class="form-control" required>
-                    <option value="">Seleccione una Opción</option>
-                    <option value="1" selected>Activo</option>
-                    <option value="2">Inactivo</option>
-            	</select>          
+   	        <label for=""><span style="color:red;">* </span>Cantidad:</label>
+   	        <input type="number" class="form-control" name="cantidad" pattern="[0-9]{0,11}" title="Solo se permite numeros validos" min="0" required>      
+		</div>
+		<div class="form-group col-md-6 col-lg-4">
+   	        <label for=""><span style="color:red;">* </span>Costo:</label>
+   	        <div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" id="moneda" class="form-control" name="costo" placeholder="Valor en pesos" pattern="[0-9]{0,11}" min="0" title="Solo se permite valores validos" required>
+			</div>       
+		</div>
+		<div class="form-group col-md-6 col-lg-4">
+   	        <label for=""><span style="color:red;">* </span>Precio:</label>
+   	        <div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" class="form-control" name="precio" placeholder="Valor en pesos" pattern="[0-9]{1,11}" min="0" title="Solo se permite valores validos" required>
+			</div>      
+		</div>
+		<div class="form-group col-md-6 col-lg-4">
+   	        <label for=""><span style="color:red;">* </span>Ubicación:</label>
+   	        <input type="text" class="form-control" name="ubicacion" maxlength="60" required>      
 		</div>
 			<div class="form-group col-xs-4 col-xs-offset-4 col-sm-6 col-md-6 col-lg-4 col-lg-offset-5"> <br>
          		<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
       		</div>
 	</form>
 </div>
-	<?php $consultavendedor = $vendedor->consultar_vendedor(); ?>
+	<?php $consultaproducto = $producto->consultar_producto(); ?>
 		<div id='no-more-tables'>
 			<table class="table table-bordered table-hover" id="example">
 	  		<thead>
           		<tr>
-          		    <th colspan="12">Listado de vendedores</th>
+          		    <th colspan="12">Listado de Productos</th>
           		</tr>
           		<tr>
-          		    <th>Cédula</th>
-					<th>Nombre</th>
-					<th>Dirección</th>
-					<th>Teléfono</th>
-					<th>Email</th>
-					<th>Estado</th>
+          		    <th>Código</th>
+					<th>Proveedor</th>
+					<th>Fecha de Ingreso</th>
+					<th>Referencia</th>
+					<th>Descripción</th>
+					<th>Tipo</th>
+					<th>Marca</th>
+					<th>Cantidad</th>
+					<th>Costo</th>
+					<th>Subtotal</th>
+					<th>Precio</th>
+					<th>Ubicación</th>
 					<th>Edición</th>
           		</tr>
        		</thead>
        		<tbody>
-        		<?php for($i=0;$i<count($consultavendedor);$i++): 
-        			//$vendedor1 = $compra->sel_vendedor1($consultacompra[$j]['vendedor']);
+        		<?php for($i=0;$i<count($consultaproducto);$i++): 
+        			$proveedor1 = $producto->sel_proveedor1($consultaproducto[$i]['idproveedor']);
         		?>
 				<tr>
-					<td data-title='Identificacion proveeedor'><?= $consultavendedor[$i]['idvendedor'] ?></td>
-					<td data-title='Nombre vendedor'><?= $consultavendedor[$i]['nombre'] ?></td>
-					<td data-title='direccion'><?= $consultavendedor[$i]['direccion'] ?></td>
-					<td data-title='Telefono'><?= $vendedor->formato_telefono_general($consultavendedor[$i]['telefono']) ?></td>
-					<td data-title='email'><?= $consultavendedor[$i]['email'] ?></td>
-					<td data-title='estado'><?= $consultavendedor[$i]['estado'] ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=5&id=<?= $consultavendedor[$i]['idvendedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td data-title='Código'><?= $consultaproducto[$i]['idcodigo'] ?></td>
+					<td data-title='Proveedor'><?= $proveedor1[0]['nombre'] ?></td>
+					<td data-title='Fecha de Ingreso'><?= $consultaproducto[$i]['fechaingreso'] ?></td>
+					<td data-title='Referencia'><?= $consultaproducto[$i]['referencia'] ?></td>
+					<td data-title='Descripcion'><?= $consultaproducto[$i]['descripcion'] ?></td>
+					<td data-title='Tipo'><?= $consultaproducto[$i]['tipo'] ?></td>
+					<td data-title='Marca'><?= $consultaproducto[$i]['marca'] ?></td>
+					<td data-title='Cantidad'><?= $consultaproducto[$i]['cantidad'] ?></td>
+					<td data-title='Costo'>$ <?= number_format($consultaproducto[$i]['costo']) ?></td>
+					<td data-title='Subtotal'>$ <?= number_format($consultaproducto[$i]['subtotal']) ?></td>
+					<td data-title='Precio'>$ <?= number_format($consultaproducto[$i]['precio']) ?></td>
+					<td data-title='Ubicacion'><?= $consultaproducto[$i]['ubicacion'] ?></td>
+                    <td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
-							<input type="hidden" name="idproveeli" value="<?= $consultavendedor[$i]['idvendedor'] ?>">
+							<input type="hidden" name="idproveeli" value="<?= $consultaproducto[$i]['idproducto'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
 					</td>-->

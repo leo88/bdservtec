@@ -3,3 +3,13 @@
     width: 400px;
     vertical-align: top;
 }
+
+.input-group-addon
+{
+    background-color:#FFF;
+}
+
+.input-group .input-group-addon + .form-control
+{
+    border-left:none;
+}

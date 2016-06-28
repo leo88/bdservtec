@@ -13,7 +13,7 @@
     $marca    			= isset($_POST['marca']) ? $_POST['marca'] : NULL;
 	$cantidad        	= isset($_POST['cantidad']) ? $_POST['cantidad'] : NULL;
 	$costo      		= isset($_POST['costo']) ? $_POST['costo'] : NULL;
-    $subtotal      		= isset($_POST['subtotal']) ? $_POST['subtotal'] : NULL;
+    $subtotal      		= $cantidad * $costo;
     $precio     		= isset($_POST['precio']) ? $_POST['precio'] : NULL;
     $ubicacion    		= isset($_POST['ubicacion']) ? $_POST['ubicacion'] : NULL;
 	$idcodigoeli    	= isset($_POST['idcodigoeli']) ? $_POST['idcodigoeli'] : NULL;
