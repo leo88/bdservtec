@@ -14,7 +14,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Referencia:</label>
-   	        <input type="text" class="form-control" name="referencia" maxlength="100" required>        
+   	        <input type="text" class="form-control" name="referencia" maxlength="100" required> 
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Descripción:</label>
@@ -23,8 +23,8 @@
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
    	        <select name="tipo" class="form-control" required>
-                <option value="">Seleccione una Opción</option>
-                <option value="1" selected>Original</option>
+                <option value="" selected>Seleccione una Opción</option>
+                <option value="1">Original</option>
                 <option value="2">Generico</option>
                 <option value="3">Otra</option>
            	</select>           
