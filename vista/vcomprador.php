@@ -14,7 +14,7 @@
             <select name="detalle" class="form-control" required>
                     <option value="" selected>Seleccione una Opción</option>
                     <option value="1">Cliente</option>
-                    <option value="2">Servicio Tec.</option>
+                    <option value="2">Servicio tecnico</option>
                     <option value="3">Intermediario</option>
             </select>         
 		</div>

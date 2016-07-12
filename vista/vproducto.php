@@ -5,6 +5,7 @@
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Proveedor:</label>
+   	        <input type="hidden" class="form-control" name="fechaingreso" value="<?php echo date('Y-m-d'); ?>"  required> 
    	        <select name="idproveedor" class="form-control" >
 				<option value=0>Seleccione proveedor</option>
 				<?php for($j=0;$j<count($proveedor2);$j++): ?>

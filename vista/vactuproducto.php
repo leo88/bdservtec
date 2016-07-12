@@ -8,8 +8,9 @@
          <div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>proveedor:</label>
    	        <input type="text" class="form-control" name="idproveedor" value="<?= $consultaedit[0]['idproveedor']  ?>"
-   	         maxlength="100" required>  		
-			<input type="hidden" name="idcod" value="<?= $idcodigo ?>">
+   	         maxlength="100" required>  
+            <input type="hidden" class="form-control" name="fechaingreso" value="<?= $consultaedit[0]['fechaingreso']  ?>">	
+			     <input type="hidden" name="idcod" value="<?= $idcodigo ?>">
             <input type="hidden" name="actu" value="actu">         
 		</div>		
             

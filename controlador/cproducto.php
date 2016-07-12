@@ -6,7 +6,7 @@
 
 	$idcodedit   		= isset($_POST['idcod']) ? $_POST['idcod'] : NULL;
 	$idproveedor        = isset($_POST['idproveedor']) ? $_POST['idproveedor'] : NULL;
-	$fechaingreso      	= date('Y-m-d');
+	$fechaingreso      	= isset($_POST['fechaingreso']) ? $_POST['fechaingreso'] : NULL;
     $referencia      	= isset($_POST['referencia']) ? $_POST['referencia'] : NULL;
     $descripcion     	= isset($_POST['descripcion']) ? $_POST['descripcion'] : NULL;
     $tipo    			= isset($_POST['tipo']) ? $_POST['tipo'] : NULL;
