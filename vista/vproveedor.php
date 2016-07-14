@@ -5,34 +5,34 @@
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
-   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>    
+   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Nombre proveedor:</label>
-   	        <input type="text" class="form-control" name="nombre" maxlength="50" required>        
+   	        <input type="text" class="form-control" name="nombre" maxlength="50" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">contacto:</label>
-   	        <input type="text" class="form-control" name="contacto" maxlength="50">        
+   	        <input type="text" class="form-control" name="contacto" maxlength="50">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Telefono proveedor:</label>
-   	        <input type="number" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
+   	        <input type="number" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Telefono contacto:</label>
-   	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
+   	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Direccion:</label>
-   	        <input type="text" class="form-control" name="direccion" maxlength="50">          
+   	        <input type="text" class="form-control" name="direccion" maxlength="50">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email" maxlength="90">          
+   	        <input type="email" class="form-control" name="email" maxlength="90">
 		</div>
-		
-			<div class="form-group col-md-6"> <br>          		
+
+			<div class="form-group col-md-6"> <br>
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
       		</div>
 	</form>
@@ -56,7 +56,7 @@
           		</tr>
        		</thead>
        		<tbody>
-        		<?php for($i=0;$i<count($consultaproveedor);$i++): 
+        		<?php for($i=0;$i<count($consultaproveedor);$i++):
         			//$proveedor1 = $compra->sel_proveedor1($consultacompra[$j]['proveedor']);
         		?>
 				<tr>
@@ -67,7 +67,7 @@
 					<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
 					<td data-title='direccion'><?= $consultaproveedor[$i]['direccion'] ?></td>
 					<td data-title='email'><?= $consultaproveedor[$i]['email'] ?></td>
-                    <td data-title='Edición'><a href="home.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">
@@ -80,11 +80,11 @@
 			</table>
 		</div>
 	</div><!--/row-->
-<br/><br/>   
+<br/><br/>
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from  
-                                            //previously active menu item 
+        $(".nav li").removeClass("active");//this will remove the active class from
+                                            //previously active menu item
         $('#producto').addClass('active');
     });
 </script>
