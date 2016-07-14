@@ -6,13 +6,13 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
   <?php date_default_timezone_set('America/Bogota'); ?>
-	
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>  	
+
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 	<link rel="stylesheet" href="css/tablaResponsive.css"/>
 	<link rel="stylesheet" href="css/datatable.css"/>
 	<link rel="stylesheet" href="css/miestilo.css">
-	<link rel="stylesheet" href="fonts/style.css">        
+	<link rel="stylesheet" href="fonts/style.css">
 	<link rel="stylesheet" href="css/chosen.css">
 	<link rel="stylesheet" href="css/chosen-bootstrap.css">
 	<link rel="stylesheet" href="css/animate.css">
@@ -22,7 +22,7 @@
   <script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-tab.js"></script>
 	<script src="js/jquery-datatable.js"></script>
-  	
+
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -31,7 +31,7 @@
     			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>                        
+        			<span class="icon-bar"></span>
       			</button>
       			<a class="navbar-brand active" href="index.php">Wold Comunicaciones</a>
     		</div>
@@ -43,8 +43,8 @@
       					<ul class="dropdown-menu">
       						<li><a href="index.php?pag=2">Proveedor</a></li>
       						<li><a href="index.php?pag=4">Vendedor</a></li>
-      						<li><a href="index.php?pag=6">Comprador</a></li>
-      						<li><a href="index.php?pag=8">producto</a></li>
+      						<li><a href="index.php?pag=6">Clientes</a></li>
+      						<li><a href="index.php?pag=8">Producto</a></li>
       						<li><a href="index.php?pag=10">Venta</a></li>
       						<li><a href="index.php?pag=12">Clientes</a></li>
       					</ul>
@@ -91,7 +91,7 @@
       						<li><a href="index.php?pag=34">Existencia</a></li>
       						<li><a href="index.php?pag=35">Servicio Técnico</a></li>
       					</ul>
-      				</li> 
+      				</li>
       				<li><a href="index.php?pag=46"><span class="glyphicon glyphicon-eye-open"></a></li>
     			</ul>
     			<ul class="nav navbar-nav navbar-right">
@@ -102,193 +102,193 @@
    			</div>
   		</div>
 	</nav>
-    <div class="container"> 
+    <div class="container">
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
       if($page == null){
           include("vista/vhome.php");
       }
-			if ($page == 2) 
+			if ($page == 2)
 			{
                 include("vista/vproveedor.php");
 			}
-            if ($page == 3) 
+            if ($page == 3)
 			{
                 include("vista/vactuproveedor.php");
 			}
-            if ($page == 4) 
+            if ($page == 4)
 			{
                 include("vista/vvendedor.php");
 			}
-            if ($page == 5) 
+            if ($page == 5)
 			{
                 include("vista/vactuvendedor.php");
 			}
-            if ($page == 6) 
+            if ($page == 6)
 			{
-                include("vista/vcomprador.php");
+                include("vista/vcliente.php");
 			}
-            if ($page == 7) 
-			{
-                include("vista/vactucomprador.php");
-			}
-            if ($page == 8) 
-			{
-                include("vista/vproducto.php");
-			}
-            if ($page == 9) 
-			{
-                include("vista/vactuproducto.php");
-			}
-            if ($page == 10) 
-			{
-                include("vista/vventa.php");
-			}
-             if ($page == 11) 
-			{
-                include("vista/vactuventa.php");
-			}
-            if ($page == 12) 
-			{
-                include("vista/vactuotros.php");
-			}
-            if ($page == 13) 
-			{
-                include("vista/vserviciotecnico.php");
-			}
-            if ($page == 14) 
-			{
-                include("vista/vactuserviciotecnico.php");
-			}
-            if ($page == 15) 
-			{
-                include("vista/vservicioentregado.php");
-			}
-            if ($page == 16) 
-			{
-                include("vista/vmovimiento.php");
-			}			
-            if ($page == 17) 
-			{
-                include("vista/vactumovimiento.php");
-			}
-            if ($page == 18) 
-			{
-                include("vista/vdevolucion.php");
-			}
-			 if ($page == 19) 
-			{
-                include("vista/vcompra.php");
-			}
-            if ($page == 20) 
-			{
-                include("vista/vcompraproduc.php");
-			}
-            if ($page == 21) 
-			{
-                include("vista/vreposicion.php");
-			}
-            if ($page == 22) 
+            if ($page == 7)
 			{
                 include("vista/vactucliente.php");
 			}
-            if ($page == 23) 
+            if ($page == 8)
 			{
-                include("vista/vactucompraproduc.php");
+                include("vista/vproducto.php");
 			}
-			if ($page == 24) 
+            if ($page == 9)
+			{
+                include("vista/vactuproducto.php");
+			}
+            if ($page == 10)
 			{
                 include("vista/vventa.php");
 			}
-            if ($page == 25) 
+             if ($page == 11)
+			{
+                include("vista/vactuventa.php");
+			}
+            if ($page == 12)
+			{
+                include("vista/vactuotros.php");
+			}
+            if ($page == 13)
+			{
+                include("vista/vserviciotecnico.php");
+			}
+            if ($page == 14)
+			{
+                include("vista/vactuserviciotecnico.php");
+			}
+            if ($page == 15)
+			{
+                include("vista/vservicioentregado.php");
+			}
+            if ($page == 16)
+			{
+                include("vista/vmovimiento.php");
+			}
+            if ($page == 17)
+			{
+                include("vista/vactumovimiento.php");
+			}
+            if ($page == 18)
+			{
+                include("vista/vdevolucion.php");
+			}
+			 if ($page == 19)
+			{
+                include("vista/vcompra.php");
+			}
+            if ($page == 20)
+			{
+                include("vista/vcompraproduc.php");
+			}
+            if ($page == 21)
+			{
+                include("vista/vreposicion.php");
+			}
+            if ($page == 22)
+			{
+                include("vista/vactucliente.php");
+			}
+            if ($page == 23)
+			{
+                include("vista/vactucompraproduc.php");
+			}
+			if ($page == 24)
+			{
+                include("vista/vventa.php");
+			}
+            if ($page == 25)
 			{
                 include("vista/vactuventa.php");//no esta creado
 			}
-			if ($page == 26) 
+			if ($page == 26)
 			{
                 include("vista/vventaproduc.php");
 			}
-            if ($page == 27) 
+            if ($page == 27)
 			{
                 include("vista/vactuventaproduc.php");
 			}
-			if ($page == 28) 
+			if ($page == 28)
 			{
                 include("vista/vactudevolucion.php");
 			}
-			if ($page == 29) 
+			if ($page == 29)
 			{
                 include("vista/vminutosvalor.php");
 			}
-			if ($page == 30) 
+			if ($page == 30)
 			{
                 include("vista/vactuminutosvalor.php");
 			}
-			if ($page == 31) 
+			if ($page == 31)
 			{
                 include("vista/vrecargas.php");
 			}
-			if ($page == 32) 
+			if ($page == 32)
 			{
                 include("vista/vacturecargas.php");
 			}
-            if ($page == 33) 
+            if ($page == 33)
             {
                 include("vista/vusuario.php");
             }
-      if ($page == 34) 
+      if ($page == 34)
       {
                 include("vista/vcsexistencia.php");
       }
-      if ($page == 35) 
+      if ($page == 35)
       {
                 include("vista/vcsst.php");
       }
-      if ($page == 36) 
+      if ($page == 36)
       {
                 include("vista/vcscompra.php");
       }
-      if ($page == 37) 
+      if ($page == 37)
       {
                 include("vista/vcsventa.php");
       }
-      if ($page == 38) 
+      if ($page == 38)
       {
                 include("vista/vcsdevolucion.php");
       }
-      if ($page == 39) 
+      if ($page == 39)
       {
                 include("vista/vcscontabilidad.php");
       }
-      if ($page == 40) 
+      if ($page == 40)
       {
                 include("vista/vrecibo.php");
       }
-      if ($page == 41) 
+      if ($page == 41)
       {
                 include("vista/vcodigo.php");
       }
-      if ($page == 42) 
+      if ($page == 42)
       {
                 include("vista/prosesbarcode.php");
       }
-      if ($page == 43) 
+      if ($page == 43)
       {
                 include("vista/vtiquete.php");
       }
-      if ($page == 44) 
+      if ($page == 44)
       {
                 include("vista/vmovi.php");
       }
-      if ($page == 45) 
+      if ($page == 45)
       {
                 include("vista/vactumovi.php");
       }
-       if ($page == 46) 
+       if ($page == 46)
       {
                 include("vista/vcreditos.php");
       }
-      if ($page == 47) 
+      if ($page == 47)
       {
                 include("vista/prosesbarcode.php");
       }
@@ -306,8 +306,8 @@
 				        "bInfo": true,
 				        "bAutoWidth": true
 				    } );
-				} );	
-			</script>	
+				} );
+			</script>
 
       <script type="text/javascript">
         $(document).ready(function() {
