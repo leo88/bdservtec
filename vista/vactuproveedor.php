@@ -28,6 +28,10 @@
 		            <input type="number" class="form-control" name="telefono2"  value="<?= $consultaedit[0]['telefono2']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
+					<label for="">Dirección:</label>
+		            <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion'] ?>" maxlength="70">
+				</div>
+				<div class="form-group col-md-6 col-lg-6">
 					<label for="">Email:</label>
 		            <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email'] ?>" maxlength="70">
 				</div>

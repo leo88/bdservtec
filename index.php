@@ -118,11 +118,11 @@
 			}
             if ($page == 4)
 			{
-                include("vista/vvendedor.php");
+                include("vista/vempleado.php");
 			}
             if ($page == 5)
 			{
-                include("vista/vactuvendedor.php");
+                include("vista/vactuempleado.php");
 			}
             if ($page == 6)
 			{
