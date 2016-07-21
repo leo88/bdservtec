@@ -1,5 +1,9 @@
 <?php
 
+	/*
+			*	version: 1.0 21/07/2016
+	*/
+
 	include 'controlador/conexion.php';
 	include 'functions.php';
 
@@ -12,28 +16,28 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbproducto
 		 */
-		function insertar_producto($idproveedor, $fechaingreso, $referencia, $descripcion, $tipo, $marca, $cantidad, $costo, $subtotal, $precio, $ubicacion)
+		function insertar_producto($referencia, $descripcion, $tipo, $marca, $precio, $ubicacion)
 		{
-			$sql = "INSERT INTO tbproducto (idproveedor, fechaingreso, referencia, descripcion, tipo, marca, cantidad, costo, subtotal, precio, ubicacion)
-						VALUES ('$idproveedor','$fechaingreso','$referencia','$descripcion','$tipo','$marca','$cantidad','$costo','$subtotal','$precio','$ubicacion');";
+			$sql = "INSERT INTO tbproducto (referencia, descripcion, tipo, marca, precio, ubicacion)
+						VALUES ('$referencia','$descripcion','$tipo','$marca','$precio','$ubicacion');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbproducto
 		 */
-		function  actualizar_producto($idcodigo, $idproveedor, $fechaingreso, $referencia, $descripcion, $tipo, $marca, $cantidad, $costo, $subtotal, $precio, $ubicacion)
+		function  actualizar_producto($idcodigo, $referencia, $descripcion, $tipo, $marca, $precio, $ubicacion)
 		{
-			$sql = "UPDATE tbproducto SET idproveedor = '$idproveedor',fechaingreso = '$fechaingreso',referencia = '$referencia',descripcion = '$descripcion',tipo = '$tipo',marca = '$marca' WHERE idcodigo = '$idcodigo';";
+			$sql = "UPDATE tbproducto SET referencia = '$referencia',descripcion = '$descripcion',tipo = '$tipo',marca = '$marca',precio = '$precio',ubicacion = '$ubicacion' WHERE idcodigo = '$idcodigo';";
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la elimnar datos de la tabla tbproducto
+		 *función para eliminar datos de la tabla tbproducto
 		 */
 		function eliminar_producto($idcodigo)
 		{
 			$sql = "DELETE FROM tbproducto WHERE idcodigo = '$idcodigo'";
 			$this -> cons($sql);
-		}	
+		}
 		/*
 		 *función para la consulta de los datos de la tabla tbproducto
 		 */
@@ -43,27 +47,11 @@
 			return $this->SeleccionDatos($sql);
 		}
 		/*
-    	 *	Función para retornar los datos de la tbproducto	
+    	 *	Función para retornar los datos de la tbproducto
          */
 		function consultar_producto_id($idcodigo)
 		{
 			$sql = "SELECT * FROM tbproducto WHERE idcodigo = '$idcodigo' ";
 			return $this -> SeleccionDatos($sql);
-		}
-		 /*
-		 	Función para la seleccion de la tabla cliente
-		 */
-		function sel_proveedor()        
-		{
-            $sql = "SELECT * FROM `tbproveedor`";
-            return $this->SeleccionDatos($sql);
-        }
-        /*
-		 	Función para la seleccion especifica de los datos de la tabla cliente
-		 */
-		function sel_proveedor1($idproveedor)
-		{
-			$sql = "SELECT * FROM tbproveedor WHERE idproveedor= '$idproveedor';";
-			return $this->SeleccionDatos($sql);
 		}
 	}

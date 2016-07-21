@@ -1,5 +1,9 @@
 <?php
 
+	/*
+	 	*	version: 1.0 21/07/2016
+	*/
+
 	include 'controlador/conexion.php';
 	include 'functions.php';
 

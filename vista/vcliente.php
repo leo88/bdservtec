@@ -1,15 +1,18 @@
+<!--
+		* version: 1.0 21/07/2016
+-->
 
 <?php include 'controlador/ccliente.php'; ?>
 
 <div class="container-fluid lol">
-<div class="eti">cliente</div>
+<div class="eti">Registro de Clientes</div>
 
 	<form class="blanco" action="" method="POST">
-		<div class="form-group col-md-6 col-lg-6">
-            <label for=""><span style="color:red;">* </span>Nombre cliente:</label>
+		<div class="form-group col-md-6 col-lg-4">
+            <label for=""><span style="color:red;">* </span>Nombre Cliente:</label>
             <input type="text" class="form-control" name="nombre" maxlength="100" required>
 		</div>
-		<div class="form-group col-md-6 col-lg-6">
+		<div class="form-group col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Detalle:</label>
             <select name="detalle" class="form-control" required>
                     <option value="" selected>Seleccione una Opción</option>
@@ -18,11 +21,11 @@
                     <option value="3">Intermediario</option>
             </select>
 		</div>
-		<div class="form-group col-md-6 col-lg-6">
+		<div class="form-group col-md-6 col-lg-4">
             <label for="">Teléfono:</label>
             <input type="text" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
-		 <div class="form-group col-md-6 col-lg-6"> <br>
+		 <div class="form-group col-md-6 col-lg-12 col-lg-offset-5"> <br>
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
 	</form>

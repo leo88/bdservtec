@@ -1,5 +1,9 @@
 <?php
 
+	/*
+		*	version: 1.0 21/07/2016
+	*/
+
 	include 'modelo/mcliente.php';
 
 	$cliente = new Mcliente();
@@ -23,7 +27,7 @@
     /*
 		Comprobacion datos para actualizar
 	*/
-    if ($idclienteedit && $nombre && $detalle && $actu)
+  if ($idclienteedit && $nombre && $detalle && $actu)
 	{
 		$cliente->actualizar_cliente($idclienteedit, $nombre, $detalle, $telefono);
 	}
