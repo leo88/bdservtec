@@ -46,7 +46,7 @@
       						<li><a href="index.php?pag=6">Clientes</a></li>
       						<li><a href="index.php?pag=8">Producto</a></li>
       						<li><a href="index.php?pag=10">Venta</a></li>
-      						<li><a href="index.php?pag=12">Clientes</a></li>
+      						<li><a href="index.php?pag=12">Compra</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="venta">
@@ -150,15 +150,15 @@
 			}
             if ($page == 12)
 			{
-                include("vista/vactuotros.php");
+                include 'vista/vcompra.php';
 			}
             if ($page == 13)
 			{
-                include("vista/vserviciotecnico.php");
+                include 'vista/vcodigo.php';
 			}
             if ($page == 14)
 			{
-                include("vista/vactuserviciotecnico.php");
+                include 'vista/prosesbarcode.php';
 			}
             if ($page == 15)
 			{

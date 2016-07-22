@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 21/07/2016
+		* version: 1.1 22/07/2016
 -->
 
 <?php include 'controlador/cproducto.php'; ?>
@@ -59,6 +59,7 @@
 									<th>Marca</th>
 									<th>Precio</th>
 									<th>Ubicación</th>
+									<th>Código de Barras</th>
 									<th>Edición</th>
           		</tr>
        		</thead>
@@ -72,6 +73,7 @@
 					<td data-title='Marca'><?= $consultaproducto[$i]['marca'] ?></td>
 					<td data-title='Precio'>$ <?= number_format($consultaproducto[$i]['precio']) ?></td>
 					<td data-title='Ubicacion'><?= $consultaproducto[$i]['ubicacion'] ?></td>
+					<td data-title='Código de Barras'><a href="index.php?pag=13&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
           <td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
