@@ -1,6 +1,6 @@
 
 <!-- inicio movimiento -->
-<?php include('controlador/cmovimiento.php'); ?>
+<?php include 'controlador/cmovimiento.php'; ?>
 
 <div class="container-fluid lol">
 	<form action="" method="POST" class="blanco">

@@ -5,7 +5,7 @@
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
-   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>
+   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" placeholder="Nit o Cedula de Ciudadanía" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Nombre proveedor:</label>

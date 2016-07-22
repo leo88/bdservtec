@@ -34,13 +34,13 @@
            	<input type="hidden" name="motivo" value="Compra" required>
            	<input type="hidden" name="idgeneral" value="<?= $idgeneral3[0]['numero_compra'] ?>">
             <label for=""><span style="color:red;">* </span>Referencia:</label><br>
-            <select name="referencia" class="chzn-select form-control">
-				<option value=0>Seleccione producto</option>
-				<?php for($i=0;$i<count($referencia2);$i++): ?>
-					<option value="<?= $referencia2[$i]['referencia'] ?>">
-					<?= $referencia2[$i]['referencia'] ?></option>
-				<?php endfor; ?>
-			</select>
+            <select name="idcodigo" class="chzn-select form-control">
+               <option value=0>Seleccione producto</option>
+               <?php for($i=0;$i<count($idcodigo2);$i++): ?>
+                 <option value="<?= $idcodigo2[$i]['idcodigo'] ?>">
+                 <?= $idcodigo2[$i]['idcodigo'] ?></option>
+               <?php endfor; ?>
+             </select>
 		</div>
 		<div class="form-group campo col-md-3">
             <label for=""><span style="color:red;">* </span>Cantidad:</label>
@@ -67,9 +67,8 @@
             </tr>
             <tr>
                 <th>ID</th>
-                <th>ID Venta</th>
+                <th>ID Compra</th>
 				<th>Motivo</th>
-				<th>Referencia</th>
 				<th>Cantidad</th>
 				<th>Valor</th>
 				<th>Edición</th>
@@ -82,7 +81,6 @@
 					<td><?= $consultamovimiento[$i]['idmovimiento'] ?></td>
 					<td><?= $consultamovimiento[$i]['idgeneral'] ?></td>
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
-					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
 					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
