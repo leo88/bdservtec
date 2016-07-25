@@ -1,5 +1,5 @@
 <!--
-		* version: 1.1 22/07/2016
+		* version: 1.2 25/07/2016
 -->
 
 <?php include 'controlador/cproducto.php'; ?>
@@ -9,7 +9,7 @@
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Referencia:</label>
-   	        <input type="text" class="form-control" name="referencia" maxlength="100" required>
+   	        <input type="text" class="form-control" name="referencia" maxlength="100" placeholder="Modelo o Referencia" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Clase de dispositivo:</label>
