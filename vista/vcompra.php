@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 22/07/2016
+		* version: 1.1 26/07/2016
 -->
 
 <div class="row-fluid">
@@ -66,23 +66,21 @@
                 <th colspan="12">Ultimo movimiento por compra</th>
             </tr>
             <tr>
-                <th>ID</th>
                 <th>ID Compra</th>
-				<th>Motivo</th>
-				<th>Cantidad</th>
-				<th>Valor</th>
-				<th>Edición</th>
+				        <th>Cantidad</th>
+				        <th>Valor</th>
+                <th>Subtotal</th>
+				        <th>Edición</th>
 				<!--<th>Eliminación</th>-->
             </tr>
         </thead>
         <tbody>
          <?php for($i=0;$i<count($consultamovimiento);$i++): ?>
 				<tr>
-					<td><?= $consultamovimiento[$i]['idmovimiento'] ?></td>
 					<td><?= $consultamovimiento[$i]['idgeneral'] ?></td>
-					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
+          <td>$ <?= number_format($consultamovimiento[$i]['valor'] * $consultamovimiento[$i]['cantidad']) ?></td>
 					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
