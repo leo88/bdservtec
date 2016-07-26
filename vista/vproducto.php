@@ -13,7 +13,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Clase de dispositivo:</label>
-   	        <textarea name="descripcion" rows="1" cols="25" class="form-control"  minlength="1" placeholder="Ej: Pantalla, teclado..." maxlength="100" required></textarea>
+   	        <textarea name="descripcion" rows="1" cols="25" class="form-control"  minlength="1" placeholder="Ej: Pantalla, teclado..." maxlength="50" required></textarea>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
