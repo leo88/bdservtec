@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-07-2016 a las 17:57:33
+-- Tiempo de generación: 26-07-2016 a las 16:55:26
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `tbmovimiento` (
 CREATE TABLE IF NOT EXISTS `tbproducto` (
   `idcodigo` int(11) NOT NULL COMMENT 'Codigo de barras',
   `referencia` varchar(100) NOT NULL COMMENT 'puede ir referencia y modelo',
-  `descripcion` varchar(100) NOT NULL COMMENT 'que es el elemento',
+  `descripcion` varchar(50) NOT NULL COMMENT 'que es el elemento',
   `tipo` enum('Original','Generico','Otro') NOT NULL,
   `marca` varchar(20) NOT NULL,
   `precio` int(11) NOT NULL,
