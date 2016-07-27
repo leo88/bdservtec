@@ -47,7 +47,7 @@
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
 		</div>
 		<div class="form-group campo col-md-3">
-           <label for=""><span style="color:red;">* </span>Valor:</label>
+           <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
           <div class="input-group">
               <span class="input-group-addon">$</span>
               <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
@@ -68,7 +68,7 @@
             <tr>
                 <th>ID Compra</th>
 				        <th>Cantidad</th>
-				        <th>Valor</th>
+				        <th>Valor Unitario</th>
                 <th>Subtotal</th>
 				        <th>Edición</th>
 				<!--<th>Eliminación</th>-->
