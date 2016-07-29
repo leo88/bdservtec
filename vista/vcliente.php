@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 21/07/2016
+		* version: 1.1 28/07/2016
 -->
 
 <?php include 'controlador/ccliente.php'; ?>
@@ -26,7 +26,7 @@
             <input type="text" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		 <div class="form-group col-md-6 col-lg-12 col-lg-offset-5"> <br>
-            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
         </div>
 	</form>
 </div>
@@ -52,7 +52,7 @@
                     <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>
                     <td data-title='Teléfono'><?= $cliente->formato_telefono_general($consultacliente[$i]['telefono']) ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+                    <td data-title='Edición'><a href="index.php?pag=7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             <?php endfor; ?>
 

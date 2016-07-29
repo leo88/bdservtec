@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 21/07/2016
+		* version: 1.1 28/07/2016
 -->
 
 <body class="fondo">
@@ -36,9 +36,9 @@
    	        <label for=""><span style="color:red;">* </span>Ubicación:</label>
    	        <input type="text" class="form-control" name="ubicacion" value="<?= $consultaedit[0]['ubicacion']  ?>" maxlength="60" required>
 		</div>
-		<div class="form-group col-md-6 col-lg-6"><br>
-            <input type="submit" class="btn btn-success" value="Editar">
-			<a href="index.php?pag=8" class="btn btn-success">Volver</a>
+		  <div class="form-group col-md-6 col-lg-6"><br>
+            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+			      <a href="index.php?pag=8" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
    </div>

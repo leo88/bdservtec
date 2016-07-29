@@ -1,7 +1,11 @@
+<!--
+	* version: 1.3 28/07/2016
+-->
+
 <body class="fondo">
     <div class="edit">
 
-<?php include("controlador/cempleado.php"); ?>
+<?php include 'controlador/cempleado.php'; ?>
 	<div class="eti">Editar Empleado</div>
 
 	<form action="index.php?pag=4&id=<?= $idemple?>" method="POST">
@@ -37,8 +41,8 @@
                 Escribir Inactivo en caso de que el empleado no este laborando
 		</div>
 		<div class="form-group col-lg-12">
-            <input type="submit" class="btn btn-success" value="Editar">
-			<a href="index.php?pag=4"class="btn btn-success">Volver</a>
+            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+			<a href="index.php?pag=4"class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
 </div>

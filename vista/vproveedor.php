@@ -1,4 +1,8 @@
-<?php include("controlador/cproveedor.php"); ?>
+<!--
+		* version: 1.3 28/07/2016
+-->
+
+<?php include'controlador/cproveedor.php'; ?>
 
 <div class="container-fluid lol">
 	<div class="eti">Proveedor</div>
@@ -33,7 +37,7 @@
 		</div>
 
 			<div class="form-group col-md-6"> <br>
-         			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+         			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
       		</div>
 	</form>
 </div>
@@ -46,13 +50,13 @@
           		</tr>
           		<tr>
           		    <th>Identificacion proveeedor</th>
-				<th>Nombre proveedor</th>
-				<th>Contacto</th>
-				<th>Telefono proveedor</th>
-				<th>Telefono contacto</th>
-				<th>direccion</th>
-				<th>email</th>
-				<th>Edición</th>
+					<th>Nombre proveedor</th>
+					<th>Contacto</th>
+					<th>Telefono proveedor</th>
+					<th>Telefono contacto</th>
+					<th>direccion</th>
+					<th>email</th>
+					<th>Edición</th>
           		</tr>
        		</thead>
        		<tbody>
@@ -67,7 +71,7 @@
 					<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
 					<td data-title='direccion'><?= $consultaproveedor[$i]['direccion'] ?></td>
 					<td data-title='email'><?= $consultaproveedor[$i]['email'] ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">

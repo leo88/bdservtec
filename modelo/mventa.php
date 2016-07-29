@@ -4,8 +4,8 @@
 		*	version: 1.1 26/07/2016
 	*/
 
-	include 'controlador/conexion.php';
-	include 'functions.php';
+	include_once 'controlador/conexion.php';
+	include_once 'functions.php';
 
 	class Mventa extends Funciones
 	{
@@ -41,7 +41,7 @@
 		 */
 		function consultar_venta()
 		{
-			$sql = "SELECT * FROM tbventa ORDER BY numero_venta";
+			$sql = "SELECT * FROM tbventa ORDER BY numero_venta DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

@@ -1,5 +1,5 @@
 <!--
-		* version: 1.2 25/07/2016
+		* version: 1.3 28/07/2016
 -->
 
 <?php include 'controlador/cproducto.php'; ?>
@@ -40,7 +40,7 @@
    	        <input type="text" class="form-control" name="ubicacion" maxlength="60" required>
 		</div>
 			<div class="form-group col-xs-4 col-xs-offset-4 col-sm-6 col-md-6 col-lg-4 col-lg-offset-5"> <br>
-         		<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+         		<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
       		</div>
 	</form>
 </div>
@@ -53,14 +53,13 @@
           		</tr>
           		<tr>
           		    <th>Código</th>
-									<th>Referencia</th>
-									<th>Descripción</th>
-									<th>Tipo</th>
-									<th>Marca</th>
-									<th>Precio</th>
-									<th>Ubicación</th>
-									<th>Código de Barras</th>
-									<th>Edición</th>
+					<th>Referencia</th>
+					<th>Descripción</th>
+					<th>Tipo</th>
+					<th>Marca</th>
+					<th>Precio</th>
+					<th>Ubicación</th>
+					<th>Edición</th>
           		</tr>
        		</thead>
        		<tbody>
@@ -73,8 +72,7 @@
 					<td data-title='Marca'><?= $consultaproducto[$i]['marca'] ?></td>
 					<td data-title='Precio'>$ <?= number_format($consultaproducto[$i]['precio']) ?></td>
 					<td data-title='Ubicacion'><?= $consultaproducto[$i]['ubicacion'] ?></td>
-					<td data-title='Código de Barras'><a href="index.php?pag=13&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
-          <td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+          			<td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproducto[$i]['idproducto'] ?>">

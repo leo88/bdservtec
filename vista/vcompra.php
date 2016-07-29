@@ -1,5 +1,5 @@
 <!--
-		* version: 1.1 26/07/2016
+		* version: 1.2 28/07/2016
 -->
 
 <div class="row-fluid">
@@ -70,6 +70,7 @@
 				        <th>Cantidad</th>
 				        <th>Valor Unitario</th>
                 <th>Subtotal</th>
+                <th>Código de Barras<th>
 				        <th>Edición</th>
 				<!--<th>Eliminación</th>-->
             </tr>
@@ -81,7 +82,8 @@
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
           <td>$ <?= number_format($consultamovimiento[$i]['valor'] * $consultamovimiento[$i]['cantidad']) ?></td>
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+          <td data-title='Código de Barras'><a href="index.php?pag=13&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -140,19 +142,6 @@
                    <li>Para editar los datos de algun articulo registrado use el boton <span class="icon-pencil2 tama3"></span>  (Solo para la ultima compra activa)</li>
                </ul>
          <br><br>
-        <!--inicio modal mensaje-->
-             <div class="cajaexterna">
-              <div class="cajainterna animated">
-                <div class="cajacentrada">
-                   <video src="videos/compra.mp4" controls width="60%" height="cover" autoplay preload>Tu navegador no implementa el video <code>video</code></video>
-                    <br>
-                   <div class="cierramodal">
-                   <a href="#" class="cerrarmodal btn btn-danger">CERRAR</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-         <!--final modal mensaje-->
       </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 21/07/2016
+		* version: 1.1 28/07/2016
 -->
 
 <body class="fondo">
@@ -21,8 +21,8 @@
             <input type="text" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		<div class="form-group col-md-6 col-lg-4"><br>
-            <input type="submit" class="btn btn-success" value="Editar">
-			<a href="index.php?pag=6" class="btn btn-success">Volver</a>
+            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+			<a href="index.php?pag=6" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
    </div>

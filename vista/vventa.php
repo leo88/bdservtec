@@ -1,7 +1,7 @@
 <div class="row-fluid">
 
 <!--
-  	* version: 1.5 26/07/2016
+  	* version: 1.6 28/07/2016
 -->
 
 <!-- inicio venta -->
@@ -117,7 +117,7 @@
 					<td><?= $consultamovimiento[$i]['cantidad'] * -1 ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor'] * ($consultamovimiento[$i]['cantidad'] *-1)) ?></td>			
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">

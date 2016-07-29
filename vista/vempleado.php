@@ -1,5 +1,8 @@
+<!--
+	* version: 1.3 28/07/2016
+-->
 
-<?php include("controlador/cempleado.php"); ?>
+<?php include 'controlador/cempleado.php'; ?>
 
 <div class="container-fluid lol">
 <div class="eti">Vendedor</div>
@@ -27,7 +30,7 @@
             <input type="email" class="form-control" name="email" maxlength="70">
 		</div>
 		 <div class="form-group col-sm-6 col-md-6 col-lg-4"> <br>
-            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
         </div>
 	</form>
 </div>
@@ -57,7 +60,7 @@
 					<td data-title='Teléfono'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono']) ?></td>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="index.php?pag=5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+          <td data-title='Edición'><a href="index.php?pag=5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">

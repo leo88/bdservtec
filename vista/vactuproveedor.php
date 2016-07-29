@@ -1,7 +1,11 @@
+<!--
+	* version: 1.3 28/07/2016
+-->
+
 <body class="fondo">
 	<div class="edit">
 
-		<?php include("controlador/cproveedor.php"); ?>
+		<?php include 'controlador/cproveedor.php'; ?>
 			<div class="eti">Editar Proveedor</div>
 
 			<form action="index.php?pag=2&id=<?= $idprovee?>" method="POST">
@@ -37,8 +41,8 @@
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<br>
-		            <input type="submit" class="btn btn-success" value="Editar">
-					<a href="index.php?pag=7" class="btn btn-success">Volver</a>
+		            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+					<a href="index.php?pag=2" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
 		        </div>
 			</form>
     </div>
