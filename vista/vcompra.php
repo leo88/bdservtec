@@ -25,6 +25,16 @@
 			<?php endfor; ?>
 	</div>
 
+<!-- Script para generar el saldo que queda  por cancelar-->
+<script>
+    $(function(){
+  $('#cod').change(function() {
+      selectedOption = $('option:selected', this);
+      var a = parseInt($('input[name=desc]').val( selectedOption.data('descripcion')));
+  }).change();
+  });
+</script>
+
 	<!-- inicio movimiento -->
 <?php include 'controlador/cmovimiento.php'; ?>
 
@@ -33,11 +43,11 @@
 		<div class="form-group campo col-md-3">
            	<input type="hidden" name="motivo" value="Compra" required>
            	<input type="hidden" name="idgeneral" value="<?= $idgeneral3[0]['numero_compra'] ?>">
-            <label for=""><span style="color:red;">* </span>Referencia:</label><br>
-            <select name="idcodigo" class="chzn-select form-control">
+            <label for=""><span style="color:red;">* </span>Código Producto:</label><br>
+            <select name="idcodigo" id="cod" class="chzn-select form-control">
                <option value=0>Seleccione producto</option>
                <?php for($i=0;$i<count($idcodigo2);$i++): ?>
-                 <option value="<?= $idcodigo2[$i]['idcodigo'] ?>">
+                 <option value="<?= $idcodigo2[$i]['idcodigo'] ?>" data-descripcion="<?= $idcodigo2[$i]['descripcion'].' '.$idcodigo2[$i]['tipo'].' '.$idcodigo2[$i]['marca'].' '.$idcodigo2[$i]['referencia'] ?>">
                  <?= $idcodigo2[$i]['idcodigo'] ?></option>
                <?php endfor; ?>
              </select>
@@ -56,6 +66,10 @@
         <div class="form-group campo col-md-2"><br>
            <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="glyphicon glyphicon-usd"> COMPRAR</span></button>
         </div>
+        <div class="form-group campo col-md-4">
+           <label for="">Descripción:</label>
+            <input type="text" class="form-control" name="desc" readonly>  
+    </div>
 	</form>
 </div>
 <?php $consultamovimiento = $movimiento->consultar_movimiento_c($idgeneral3[0]['numero_compra']); ?>

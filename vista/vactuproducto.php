@@ -10,7 +10,7 @@
 
 	<form action="index.php?pag=8&id=<?= $idcodigo?>" method="POST">
          <div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>referencia:</label>
+   	        <label for=""><span style="color:red;">* </span>Modelo/Referencia:</label>
    	        <input type="text" class="form-control" name="referencia" value="<?= $consultaedit[0]['referencia']  ?>"
    	         maxlength="100" required>
             <input type="hidden" class="form-control" name="tipo" value="<?= $consultaedit[0]['tipo']  ?>">
@@ -18,7 +18,7 @@
             <input type="hidden" name="actu" value="actu">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Clase de dispositivo:</label>
+   	        <label for=""><span style="color:red;">* </span>Tipo de Producto:</label>
    	        <input type="text" class="form-control" name="descripcion" value="<?= $consultaedit[0]['descripcion']  ?>" maxlength="50" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">

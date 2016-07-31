@@ -8,15 +8,15 @@
 	<div class="eti">Registrar Producto</div>
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Referencia:</label>
+   	        <label for=""><span style="color:red;">* </span>Modelo/Referencia:</label>
    	        <input type="text" class="form-control" name="referencia" maxlength="100" placeholder="Modelo o Referencia" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Clase de dispositivo:</label>
+   	        <label for=""><span style="color:red;">* </span>Tipo de Producto:</label>
    	        <textarea name="descripcion" rows="1" cols="25" class="form-control"  minlength="1" placeholder="Ej: Pantalla, teclado..." maxlength="50" required></textarea>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
+   	        <label for=""><span style="color:red;">* </span>Clase de Dispositivo:</label>
    	        <select name="tipo" class="form-control" required>
                 <option value="" selected>Seleccione una Opción</option>
                 <option value="1">Original</option>
