@@ -57,16 +57,16 @@
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($idcodigo2);$i++): ?>
 					<option value="<?= $idcodigo2[$i]['idcodigo'] ?>" data-precio="<?= $idcodigo2[$i]['precio'] ?>" data-referencia="<?= $idcodigo2[$i]['referencia'] ?>" data-descripcion="<?= $idcodigo2[$i]['descripcion'] ?>" data-tipo="<?= $idcodigo2[$i]['tipo'] ?>" data-marca="<?= $idcodigo2[$i]['marca'] ?>">
-					<?= $idcodigo2[$i]['referencia'] ?></option>
+					<?= $idcodigo2[$i]['idcodigo'] ?></option>
 				<?php endfor; ?>
 			</select>  
 		</div>
 		<div class="form-group campo col-md-3">
-           <label for="">Clase de Dispositivo:</label>
+           <label for="">Tipo de Producto:</label>
             <input type="text" class="form-control" name="desc" readonly>  
 		</div>
 		<div class="form-group campo col-md-3">
-           <label for="">Referencia:</label>
+           <label for="">Modelo/Referencia:</label>
             <input type="text" class="form-control" name="refe" readonly>  
 		</div>
 		<div class="form-group campo col-md-3">
@@ -74,7 +74,7 @@
             <input type="text" class="form-control" name="mark" readonly>  
 		</div>
 		<div class="form-group campo col-md-3">
-           <label for="">Tipo:</label>
+           <label for="">Clase de Dsipositivo:</label>
             <input type="text" class="form-control" name="tipo" readonly>  
 		</div>
 		<div class="form-group campo col-md-3">
