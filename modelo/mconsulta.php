@@ -21,9 +21,14 @@
 
 			$sql = "SELECT tbproducto.idcodigo AS idcodigo,tbproducto.referencia AS referencia,tbproducto.descripcion AS descripcion,tbproducto.tipo AS tipo,tbproducto.marca AS marca,tbproducto.ubicacion AS ubicacion,sum(tbmovimiento.cantidad) AS SumaDecantidad,tbproducto.precio AS precio from (tbproducto join tbmovimiento on((tbproducto.idcodigo = tbmovimiento.idcodigo))) group by tbproducto.idcodigo,tbproducto.referencia,tbproducto.descripcion,tbproducto.tipo,tbproducto.marca,tbproducto.precio,tbproducto.ubicacion";
 			return $this->SeleccionDatos($sql);
-
-			/*$sql = "SELECT * FROM csexistencia";
-			return $this->SeleccionDatos($sql);*/
+		}
+		/*
+		 *función para la consulta de los datos de la compra con su valor total
+		 */
+		function consultarCompraTotal()
+		{
+			$sql = "SELECT cscom.numero_compra, com.fecha,com.proveedor,pro.nombre,pro.telefono,sum(cscom.SUBTOTAL) as total from tbcompra as com INNER JOIN tbproveedor as pro ON pro.idproveedor = com.proveedor JOIN cscompraproductos as cscom ON com.numero_compra = cscom.numero_compra GROUP BY cscom.numero_compra, com.fecha";
+			return $this->SeleccionDatos($sql);
 		}
 		/*
 		 *función para la consulta de los datos de la consulta servicio tecnico
