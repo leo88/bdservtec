@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="../css/impreso.css" media="print"/>
 <table id="barra1">
     <tr>
-        <td> &nbsp;&nbsp;&nbsp;</td><td><?= bar128(stripslashes($_POST['bar']));?></td> <td class="barra2"><button id="boton"onclick="goBack()">atras</button></td>
-        <td><?= bar128(stripslashes($_POST['bar']));?></td> <td class="barra2"><button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Print</span></button> </td>
-        <td><?= bar128(stripslashes($_POST['bar']));?></td> <td></td>
+        <td> &nbsp;&nbsp;&nbsp;</td><td><?= bar128(stripslashes($_POST['bar']),$_POST['bardos']);?></td> <td class="barra2"><button id="boton"onclick="goBack()">atras</button></td>
+        <td><?= bar128(stripslashes($_POST['bar']),$_POST['bardos']);?></td> <td class="barra2"><button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Print</span></button> </td>
+        <td><?= bar128(stripslashes($_POST['bar']),$_POST['bardos']);?></td> <td></td>
     </tr>
 </table>
 <!--

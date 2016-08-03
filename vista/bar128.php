@@ -33,7 +33,7 @@ $char128wid = array(
 	'114131','311141','411131','211412','211214','211232','23311120'   );					   // 100-106
 
 ////Define Function
-function bar128($text) {						// Part 1, make list of widths
+function bar128($text, $test) {						// Part 1, make list of widths
   global $char128asc,$char128wid;				
   $w = $char128wid[$sum = 104];							// START symbol
   $onChar=1;
@@ -47,6 +47,6 @@ function bar128($text) {						// Part 1, make list of widths
   $html="<table cellpadding=0 cellspacing=0><tr>";				
   for($x=0;$x<strlen($w);$x+=2)   						// code 128 widths: black border, then white space
 	$html .= "<td><div class=\"b128\" style=\"border-left-width:{$w[$x]};width:{$w[$x+1]}\"></div>";	
-  return "$html<tr><td  colspan=".strlen($w)." align=center><font family=arial size=2><b>$text</table>";		
+  return "$html<tr><td  colspan=".strlen($w)." align=center><font family=arial size=2><b>$text|$test</table>";		
 }
 ?>
