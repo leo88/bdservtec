@@ -1,7 +1,7 @@
 <?php 
 
     /*  
-        *   @Version: V1.0 27/07/16
+        *   @Version: V1.1 04/08/16
     */
 
     include 'estilos.php'; 
@@ -11,7 +11,7 @@
 
 <div class="etinfo">Informe Existencia</div>
 
-<?php $consultexistencia = $existencia->consultar_existencia(); ?>
+<?php $consultexistencia = $existencia->consultarExistencia(); ?>
 	<table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
@@ -43,6 +43,11 @@
             <?php endfor; ?>
         </tbody>
     </table> 
+
+<!-- 
+    * Script para el selector de el menu principal
+-->
+
 <script type="text/javascript">
     $(document).ready(function () {
         $(".nav li").removeClass("active");//this will remove the active class from  

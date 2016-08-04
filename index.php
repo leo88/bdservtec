@@ -111,52 +111,54 @@
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
       if($page == null){
-          include("vista/vhome.php");
+          include 'vista/vhome.php';
       }
-			if ($page == 2)
-			{
-                include("vista/vproveedor.php");
-			}
-            if ($page == 3)
-			{
-                include("vista/vactuproveedor.php");
-			}
-            if ($page == 4)
-			{
-                include("vista/vempleado.php");
-			}
-            if ($page == 5)
-			{
-                include("vista/vactuempleado.php");
-			}
-            if ($page == 6)
-			{
-                include("vista/vcliente.php");
-			}
-            if ($page == 7)
-			{
-                include("vista/vactucliente.php");
-			}
-            if ($page == 8)
-			{
-                include("vista/vproducto.php");
-			}
-            if ($page == 9)
-			{
-                include("vista/vactuproducto.php");
-			}
-            if ($page == 10)
-			{
-                include("vista/vventa.php");
-			}
-             if ($page == 11)
-			{
-                include("vista/vactuventa.php");
-			}
-            if ($page == 12)
-			{
-                include 'vista/vcompra.php';
-			}
+      switch($page){
+          case 2:
+              include 'vista/vproveedor.php';
+              break;
+          case 3:
+              include 'vista/vactuproveedor.php';
+              break;
+          case 4:
+              include 'vista/vempleado.php';
+              break;
+          case 5:
+              include 'vista/vactuempleado.php';
+              break;
+          case 6:
+              include 'vista/vcliente.php';
+              break;
+          case 7:
+              include 'vista/vactucliente.php';
+              break;
+          case 8:
+              include 'vista/vproducto.php';
+              break;
+          case 9:
+              include 'vista/vactuproducto.php';
+              break;
+          case 10:
+              include 'vista/vventa.php';
+              break;
+          case 11:
+              include 'vista/vactuventa.php';
+              break;
+          case 12:
+              include 'vista/vcompra.php';
+              break;
+          case 13:
+              include 'vista/vcodigo.php';
+              break;
+          case 14:
+              include 'vista/prosesbarcode.php';
+              break;
+          case 15:
+              include 'vista/vservicioentregado.php';
+              break;
+      }
+			/*
+      
             if ($page == 13)
 			{
                 include 'vista/vcodigo.php';
@@ -192,7 +194,7 @@
             if ($page == 21)
 			{
                 include("vista/vreposicion.php");
-			}
+			}*/
             if ($page == 22)
 			{
                 include("vista/vactucliente.php");
@@ -201,7 +203,7 @@
 			{
                 include("vista/vactucompraproduc.php");
 			}
-			if ($page == 24)
+			      if ($page == 24)
 			{
                 include("vista/vventa.php");
 			}
@@ -209,7 +211,7 @@
 			{
                 include("vista/vactuventa.php");//no esta creado
 			}
-			if ($page == 26)
+			      if ($page == 26)
 			{
                 include("vista/vventaproduc.php");
 			}

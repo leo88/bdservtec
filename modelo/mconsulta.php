@@ -1,7 +1,7 @@
 <?php
 
 	/*  
-        *   @Version: V1.0 27/07/16
+        *   @Version: V1.2 04/08/16
     */
 
 	include 'controlador/conexion.php';
@@ -16,7 +16,7 @@
 		/*
 		 *función para la consulta de los datos de la consulta existencia
 		 */
-		function consultar_existencia()
+		function consultarExistencia()
 		{
 
 			$sql = "SELECT tbproducto.idcodigo AS idcodigo,tbproducto.referencia AS referencia,tbproducto.descripcion AS descripcion,tbproducto.tipo AS tipo,tbproducto.marca AS marca,tbproducto.ubicacion AS ubicacion,sum(tbmovimiento.cantidad) AS SumaDecantidad,tbproducto.precio AS precio from (tbproducto join tbmovimiento on((tbproducto.idcodigo = tbmovimiento.idcodigo))) group by tbproducto.idcodigo,tbproducto.referencia,tbproducto.descripcion,tbproducto.tipo,tbproducto.marca,tbproducto.precio,tbproducto.ubicacion";
@@ -31,33 +31,9 @@
 			return $this->SeleccionDatos($sql);
 		}
 		/*
-		 *función para la consulta de los datos de la consulta servicio tecnico
+		 *función para la consulta de los datos de la consulta compra por productos
 		 */
-		function consultar_st()
-		{
-			$sql = "SELECT * FROM csst ORDER BY numero_orden desc";
-			return $this->SeleccionDatos($sql);
-		}
-		/*
-		 *función para la consulta de los datos de la consulta servicio tecnico entregado
-		 */
-		function consultar_stentregado()
-		{
-			$sql = "SELECT * FROM tbservicioentregado ORDER BY numero_orden DESC";
-			return $this->SeleccionDatos($sql);
-		}
-		/*
-		 *función para la consulta de los datos de la consulta compra
-		 */
-		function consultar_compra()
-		{
-			$sql = "SELECT * FROM cscompra";
-			return $this->SeleccionDatos($sql);
-		}
-		/*
-		 *función para la consulta de los datos de la consulta compra productos
-		 */
-		function consultar_compraproducto()
+		function consultarCompra()
 		{
 			$sql = "SELECT * FROM cscompraproductos";
 			return $this->SeleccionDatos($sql);
