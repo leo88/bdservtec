@@ -156,148 +156,42 @@
           case 15:
               include 'vista/vservicioentregado.php';
               break;
-      }
-			/*
-      
-            if ($page == 13)
-			{
-                include 'vista/vcodigo.php';
-			}
-            if ($page == 14)
-			{
-                include 'vista/prosesbarcode.php';
-			}
-            if ($page == 15)
-			{
-                include("vista/vservicioentregado.php");
-			}
-            if ($page == 16)
-			{
-                include("vista/vmovimiento.php");
-			}
-            if ($page == 17)
-			{
-                include("vista/vactumovimiento.php");
-			}
-            if ($page == 18)
-			{
-                include("vista/vdevolucion.php");
-			}
-			 if ($page == 19)
-			{
-                include("vista/vcompra.php");
-			}
-            if ($page == 20)
-			{
-                include("vista/vcompraproduc.php");
-			}
-            if ($page == 21)
-			{
-                include("vista/vreposicion.php");
-			}*/
-            if ($page == 22)
-			{
-                include("vista/vactucliente.php");
-			}
-            if ($page == 23)
-			{
-                include("vista/vactucompraproduc.php");
-			}
-			      if ($page == 24)
-			{
-                include("vista/vventa.php");
-			}
-            if ($page == 25)
-			{
-                include("vista/vactuventa.php");//no esta creado
-			}
-			      if ($page == 26)
-			{
-                include("vista/vventaproduc.php");
-			}
-            if ($page == 27)
-			{
-                include("vista/vactuventaproduc.php");
-			}
-			if ($page == 28)
-			{
-                include("vista/vactudevolucion.php");
-			}
-			if ($page == 29)
-			{
-                include("vista/vminutosvalor.php");
-			}
-			if ($page == 30)
-			{
-                include("vista/vactuminutosvalor.php");
-			}
-			if ($page == 31)
-			{
-                include("vista/vrecargas.php");
-			}
-			if ($page == 32)
-			{
-                include("vista/vacturecargas.php");
-			}
-            if ($page == 33)
-            {
-                include("vista/vusuario.php");
-            }
-      if ($page == 34)
-      {
-                include("vista/vcsexistencia.php");
-      }
-      if ($page == 35)
-      {
-                include("vista/vcsst.php");
-      }
-      if ($page == 36)
-      {
-                include("vista/vcscompra.php");
-      }
-      if ($page == 37)
-      {
-                include("vista/vcsventa.php");
-      }
-      if ($page == 38)
-      {
-                include("vista/vcsdevolucion.php");
-      }
-      if ($page == 39)
-      {
-                include("vista/vcscontabilidad.php");
-      }
-      if ($page == 40)
-      {
-                include("vista/vrecibo.php");
-      }
-      if ($page == 41)
-      {
-                include("vista/vcodigo.php");
-      }
-      if ($page == 42)
-      {
-                include("vista/prosesbarcode.php");
-      }
-      if ($page == 43)
-      {
-                include("vista/vtiquete.php");
-      }
-      if ($page == 44)
-      {
-                include("vista/vmovi.php");
-      }
-      if ($page == 45)
-      {
-                include("vista/vactumovi.php");
-      }
-       if ($page == 46)
-      {
-                include("vista/vcreditos.php");
-      }
-      if ($page == 47)
-      {
-                include("vista/prosesbarcode.php");
+          case 16:
+              include 'vista/vmovimiento.php';
+              break;
+          case 17:
+              include 'vista/vactumovimiento.php';
+              break;
+          case 19:
+              include 'vista/vcompra.php';
+              break;
+          case 22:
+              include 'vista/vactucliente.php';
+              break;
+          case 24:
+              include 'vista/vventa.php';
+              break;
+          case 34:
+              include 'vista/vcsexistencia.php';
+              break;
+          case 36:
+              include 'vista/vcscompra.php';
+              break;
+          case 37:
+              include 'vista/vcsventa.php';
+              break;
+          case 41:
+              include 'vista/vcodigo.php';
+              break;
+          case 42:
+              include 'vista/prosesbarcode.php';
+              break;
+          case 46:
+              include 'vista/vcreditos.php';
+              break;
+          default:
+              include 'vista/vhome.php';
+              break;
       }
 		?>
     </div>
