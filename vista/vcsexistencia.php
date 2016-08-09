@@ -36,6 +36,7 @@
                     <td data-title='Descripción'><?= $consultexistencia[$i]['descripcion'] ?></td>
                     <td data-title='Tipo de Dispositivo'><?= $consultexistencia[$i]['tipo'] ?></td>
                     <td data-title='Marca'><?= $consultexistencia[$i]['marca'] ?></td>
+                    <td class="changeColor" data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
                     <td data-title='Precio'>$ <?= number_format($consultexistencia[$i]['precio'])?></td>
                     <td data-title='Ubicacion'><?= $consultexistencia[$i]['ubicacion'] ?></td>
                 </tr>
@@ -50,11 +51,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        var txt = $(this).text();
+        $('.changeColor').each(function() {
+        var cant = $(this).text();
 
-        if (txt < 3) {
+        if (cant < 3) {
             $(this).css("color", "red");
-        } else if(txt < 6){
+        } else if(cant < 6){
             $(this).css("color", "orange");
         }
         else{
