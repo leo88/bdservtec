@@ -36,7 +36,7 @@
                     <td data-title='Descripción'><?= $consultexistencia[$i]['descripcion'] ?></td>
                     <td data-title='Tipo de Dispositivo'><?= $consultexistencia[$i]['tipo'] ?></td>
                     <td data-title='Marca'><?= $consultexistencia[$i]['marca'] ?></td>
-                    <td data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
+                    <td id="test" data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
                     <td data-title='Precio'>$ <?= number_format($consultexistencia[$i]['precio'])?></td>
                     <td data-title='Ubicacion'><?= $consultexistencia[$i]['ubicacion'] ?></td>
                 </tr>
@@ -49,9 +49,20 @@
 -->
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from  
-                                            //previously active menu item 
-        $('#consulta').addClass('active');
+    $(document).ready(function() {
+
+        $('#test').each(function() {
+        var txt = $(this).text();
+
+        if (txt > 7) {
+            $(this).css("color", "red");
+            console.log("True");
+        } else {
+        $(this).css("color", "green");
+            console.log("False");
+        }
+
+        });
+
     });
 </script>
