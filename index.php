@@ -38,7 +38,7 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       			</button>
-      			<a class="navbar-brand active" href="index.php">Wold Comunicaciones</a>
+      			<a class="navbar-brand active" href="index.php">Wold Comunicaciones Servicio Técnico</a>
     		</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
     			<ul class="nav navbar-nav">
@@ -49,19 +49,14 @@
       						<li><a href="index.php?pag=2">Proveedor</a></li>
       						<li><a href="index.php?pag=4">Vendedor</a></li>
       						<li><a href="index.php?pag=6">Clientes</a></li>
-      						<li><a href="index.php?pag=8">Producto</a></li>
-      						<li><a href="index.php?pag=10">Venta</a></li>
-      						<li><a href="index.php?pag=12">Compra</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="venta">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Venta
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
-      						<li><a href="index.php?pag=16">Movimiento</a></li>
-      						<li><a href="index.php?pag=26">Venta por Producto</a></li>
-      						<li><a href="index.php?pag=24">Ventas</a></li>
-                  <li><a href="index.php?pag=44">Movimiento</a></li>
+                  <li><a href="index.php?pag=10">Venta</a></li>
+      						<li><a href="index.php?pag=16">Ultimo Movimiento</a></li>
                 </ul>
       				</li>
       				<li class="dropdown" id="st">
@@ -78,11 +73,9 @@
       					<ul class="dropdown-menu">
       						<li><a href="index.php?pag=3">Producto</a></li>
       						<li><a href="index.php?pag=7">Proveedor</a></li>
-      						<li><a href="index.php?pag=19">Compra</a></li>
-      						<li><a href="index.php?pag=16">Movimiento</a></li>
-      						<li><a href="index.php?pag=20">Compra por Producto</a></li>
-      						<li><a href="index.php?pag=21">Reposición</a></li>
-      						<li><a href="index.php?pag=18">Devolución</a></li>
+                  <li><a href="index.php?pag=8">Producto</a></li>
+                  <li><a href="index.php?pag=11">Compra</a></li>
+      						<li><a href="index.php?pag=16">Ultimo Movimiento</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="consulta">
@@ -142,19 +135,19 @@
               include 'vista/vventa.php';
               break;
           case 11:
-              include 'vista/vactuventa.php';
-              break;
-          case 12:
               include 'vista/vcompra.php';
               break;
-          case 13:
+          case 12:
               include 'vista/vcodigo.php';
               break;
-          case 14:
+          case 13:
               include 'vista/prosesbarcode.php';
               break;
-          case 15:
+          case 14:
               include 'vista/vservicioentregado.php';
+              break;
+          case 15:
+              include 'vista/vactuservicioentregado.php';
               break;
           case 16:
               include 'vista/vmovimiento.php';
@@ -162,14 +155,11 @@
           case 17:
               include 'vista/vactumovimiento.php';
               break;
+          case 18:
+              include 'vista/vserviciotecnico.php';
+              break;
           case 19:
-              include 'vista/vcompra.php';
-              break;
-          case 22:
-              include 'vista/vactucliente.php';
-              break;
-          case 24:
-              include 'vista/vventa.php';
+              include 'vista/vactuserviciotecnico.php';
               break;
           case 34:
               include 'vista/vcsexistencia.php';
@@ -179,12 +169,6 @@
               break;
           case 37:
               include 'vista/vcsventa.php';
-              break;
-          case 41:
-              include 'vista/vcodigo.php';
-              break;
-          case 42:
-              include 'vista/prosesbarcode.php';
               break;
           case 46:
               include 'vista/vcreditos.php';

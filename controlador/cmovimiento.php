@@ -7,17 +7,17 @@
 	$idmovimientoedit 	= isset($_POST['idmovimiento']) ? $_POST['idmovimiento'] : NULL;
 	$idgeneral      	= isset($_POST['idgeneral']) ? $_POST['idgeneral'] : NULL;
 	$motivo      		= isset($_POST['motivo']) ? $_POST['motivo'] : NULL;
-	$idcodigo         = isset($_POST['idcodigo']) ? $_POST['idcodigo'] : NULL;
+	$idcodigo         	= isset($_POST['idcodigo']) ? $_POST['idcodigo'] : NULL;
 	$cantidad   		= isset($_POST['cantidad']) ? $_POST['cantidad'] : NULL;
 	$valor   			= isset($_POST['valor']) ? $_POST['valor'] : 0;
-  $idmovimientoeli  	= isset($_POST['idmovimientoeli']) ? $_POST['idmovimientoeli'] : NULL;
+  	$idmovimientoeli  	= isset($_POST['idmovimientoeli']) ? $_POST['idmovimientoeli'] : NULL;
 	$actu          		= isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idmovimiento     	= isset($_GET['id']) ? $_GET['id'] : NULL;
 
 	/*
 		Variables para traer los datos de los desplegables
 	*/
-	$idcodigo2	= $movimiento->sel_producto();
+	$idcodigo2		= $movimiento->sel_producto();
 	$idgeneral2		= $movimiento->sel_numeroventa();
 	$idgeneral3		= $movimiento->sel_numerocompra();
 

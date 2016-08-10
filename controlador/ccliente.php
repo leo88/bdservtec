@@ -9,9 +9,9 @@
 	$cliente = new Mcliente();
 
 	$idclienteedit   = isset($_POST['idcliente']) ? $_POST['idcliente'] : NULL;
-	$nombre      	   = isset($_POST['nombre']) ? $_POST['nombre'] : NULL;
+	$nombre      	 = isset($_POST['nombre']) ? $_POST['nombre'] : NULL;
 	$detalle         = isset($_POST['detalle']) ? $_POST['detalle'] : NULL;
-  $telefono        = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;
+  	$telefono        = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;
 	$idclienteeli    = isset($_POST['idclienteeli']) ? $_POST['idclienteeli'] : NULL;
 	$actu          	 = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idcliente       = isset($_GET['id']) ? $_GET['id'] : NULL;

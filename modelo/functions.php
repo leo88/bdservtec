@@ -54,7 +54,7 @@
             } 
             return trim($new_string); 
         }
-        function sentence_case_test($string) 
+        function cambiarMayusculas($string) 
         { 
             $foo = ucwords(strtolower($string));
             return $foo; 

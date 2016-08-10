@@ -19,8 +19,8 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName = $proveedor->sentence_case_test($nombre);
-	$newContac = $proveedor->sentence_case_test($contacto);
+	$newName 	= $proveedor->cambiarMayusculas($nombre);
+	$newContac 	= $proveedor->cambiarMayusculas($contacto);
 
 	/*
 		Comprobacion datos para insertar

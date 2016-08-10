@@ -96,7 +96,7 @@
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
           <td>$ <?= number_format($consultamovimiento[$i]['valor'] * $consultamovimiento[$i]['cantidad']) ?></td>
-          <td data-title='Código de Barras'><a href="index.php?pag=13&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
+          <td data-title='Código de Barras'><a href="index.php?pag=12&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
 					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

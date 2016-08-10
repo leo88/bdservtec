@@ -22,8 +22,8 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newBrand 		= $producto->sentence_case_test($marca);
-	$newDescription = $producto->sentence_case_test($descripcion);
+	$newBrand 		= $producto->cambiarMayusculas($marca);
+	$newDescription = $producto->cambiarMayusculas($descripcion);
 
 	/*
 		Comprobacion datos para insertar
