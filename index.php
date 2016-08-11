@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/tablaResponsive.css"/>
 	<link rel="stylesheet" href="css/datatable.css"/>
 	<link rel="stylesheet" href="css/miestilo.css">
+	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="stylesheet" href="fonts/style.css">
 	<link rel="stylesheet" href="css/chosen.css">
 	<link rel="stylesheet" href="css/chosen-bootstrap.css">

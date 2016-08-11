@@ -44,8 +44,8 @@
       <label for=""><span style="color:red;">* </span>Estado:</label>
       <select name="estado" class="form-control" required>
              <option value="" selected>Seleccione una Opción</option>
-             <option value="1">Entregado</option>
-             <option value="2">No entregado</option>
+             <option value="1">Reparado</option>
+             <option value="2">No reparado</option>
              <option value="3">Entregado a peticion</option>
      </select>
     </div>
@@ -67,6 +67,7 @@
 				<th>Costo</th>
 				<th>Tecnico encargado</th>
         <th>Estado</th>
+        <th>Edicion</th>
 				<!--<th>Edición</th>
 				<th>Eliminación</th>-->
             </tr>
@@ -82,6 +83,7 @@
 					<td data-title='Costo'>$ <?= number_format($consultaservicioentregado[$i]['costo']) ?></td>
 					<td data-title='Tecnico encargado'><?= $consultaservicioentregado[$i]['tecnico'] ?></td>
           <td data-title='Estado'><?= $consultaservicioentregado[$i]['estado'] ?></td>
+          <td data-title='Edición'><a href="index.php?pag=15&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
