@@ -1,5 +1,5 @@
 <!--
-		* version: 1.2 28/07/2016
+		*  @Version: V1.3 10/08/2016
 -->
 
 <div class="row-fluid">
@@ -160,10 +160,12 @@
     </div>
 </div>
 <br><br>
+<!--
+  * Selector en la barra del menú
+-->
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from
-                                            //previously active menu item
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
         $('#producto').addClass('active');
     });
 </script>

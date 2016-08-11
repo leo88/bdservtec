@@ -1,5 +1,5 @@
 <!--
-		* version: 1.3 28/07/2016
+		* @Version: V1.4 10/08/2016
 -->
 
 <?php include 'controlador/cproducto.php'; ?>
@@ -86,10 +86,12 @@
 		</div>
 	</div><!--/row-->
 <br/><br/>
+<!--
+	* Selector en la barra del menú
+-->
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from
-                                            //previously active menu item
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
         $('#producto').addClass('active');
     });
 </script>

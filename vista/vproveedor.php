@@ -1,8 +1,9 @@
 <!--
-		* version: 1.3 28/07/2016
+		* version: 1.4 10/08/2016
 -->
 
-<?php include'controlador/cproveedor.php'; ?>
+<?php include'controlador/cproveedor.php';
+include 'estilosTablas.php'; ?>
 
 <div class="container-fluid lol">
 	<div class="eti">Proveedor</div>
@@ -16,8 +17,8 @@
    	        <input type="text" class="form-control" name="nombre" maxlength="50" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">contacto:</label>
-   	        <input type="text" class="form-control" name="contacto" maxlength="50">
+   	        <label for="">Contacto:</label>
+   	        <input type="text" class="form-control" name="contacto" placeholder="Nombre del contacto" maxlength="50">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Telefono proveedor:</label>
@@ -28,7 +29,7 @@
    	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Direccion:</label>
+   	        <label for="">Dirección:</label>
    	        <input type="text" class="form-control" name="direccion" maxlength="50">
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
@@ -42,8 +43,7 @@
 	</form>
 </div>
 	<?php $consultaproveedor = $proveedor->consultar_proveedor(); ?>
-		<div id='no-more-tables'>
-			<table class="table table-bordered table-hover" id="example">
+		<table id="" class="display" cellspacing="0" width="100%">
 	  		<thead>
           		<tr>
           		    <th colspan="12">Listado de Proveedores</th>
@@ -52,10 +52,10 @@
           		    <th>Identificacion proveeedor</th>
 					<th>Nombre proveedor</th>
 					<th>Contacto</th>
-					<th>Telefono proveedor</th>
-					<th>Telefono contacto</th>
-					<th>direccion</th>
-					<th>email</th>
+					<th>Teléfono proveedor</th>
+					<th>Teléfono contacto</th>
+					<th>Dirección</th>
+					<th>Email</th>
 					<th>Edición</th>
           		</tr>
        		</thead>
@@ -71,7 +71,7 @@
 					<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
 					<td data-title='direccion'><?= $consultaproveedor[$i]['direccion'] ?></td>
 					<td data-title='email'><?= $consultaproveedor[$i]['email'] ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">
@@ -82,13 +82,14 @@
 				<?php endfor; ?>
         	</tbody>
 			</table>
-		</div>
-	</div><!--/row-->
 <br/><br/>
+
+<!--
+	* Selector en la barra del menú
+-->
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from
-                                            //previously active menu item
-        $('#producto').addClass('active');
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
+        $('#registrar').addClass('active');
     });
 </script>

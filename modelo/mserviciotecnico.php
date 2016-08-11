@@ -26,7 +26,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbserviciotecnico
 		 */
-		function  actualizarServicio($numero_orden,$dispositivo,$marca,$referencia, $descripcion_st, $observacion, $fecha)
+		function actualizarServicio($numero_orden,$dispositivo,$marca,$referencia, $descripcion_st, $observacion, $fecha)
 		{
 			$sql = "UPDATE tbserviciotecnico SET dispositivo = '".$dispositivo."',marca = '".$marca."',referencia = '".$referencia."',descripcion_st = '".$descripcion_st."', observacion = '".$observacion."',fecha = '".$fecha."' WHERE numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);
@@ -74,7 +74,7 @@
 		 /*
 		 	Función para la seleccion de la tabla cliente
 		 */
-		function seleccionCliente()        
+		function seleccionarCliente()        
 		{
             $sql = "SELECT * FROM `tbcliente`";
             return $this->SeleccionDatos($sql);

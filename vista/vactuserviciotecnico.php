@@ -1,5 +1,5 @@
 <!--
-		* version: 1.0 10/08/2016
+		* @Version: V1.0 10/08/2016
 -->
 
 <body class="fondo">        
@@ -8,10 +8,10 @@
 <?php include 'controlador/cserviciotecnico.php'; ?>
 	<div class="eti">Editar Servicio Tecnico</div>
 
-	<form action="home.php?pag=18&id=<?= $numero_orden?>" method="POST">
+	<form action="index.php?pag=18&id=<?= $numero_orden ?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Tipo de Dispositivo:</label>
-			<input type="text" class="form-control" name="dispositivo" value="<?= $consultaedit[0]['nombre'] ?>" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>
+			<input type="text" class="form-control" name="dispositivo" value="<?= $consultaedit[0]['dispositivo'] ?>" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>
 			<input type="hidden" name="numero_orden" value="<?= $numero_orden ?>">
             <input type="hidden" name="actu" value="actu">
 		</div>
@@ -34,10 +34,6 @@
             <input type="hidden" class="form-control" name="id_cliente" value="<?= $consultaedit[0]['id_cliente']  ?>">
             <input type="hidden" class="form-control" name="empleado" value="<?= $consultaedit[0]['empleado']  ?>">
 		</div>
-		<div class="form-group col-lg-6">
-			<label for="">Fecha:</label>
-            
-		</div>
 		<div class="form-group col-lg-6"><br>
             <input type="submit" class="btn btn-success" value="Editar">
 			<a href="index.php?pag=18" class="btn btn-success">Volver</a>
@@ -45,10 +41,12 @@
 	</form>
     </div> 		
 </body>
+<!--
+  * Selector en la barra del menú
+-->
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nav li").removeClass("active");//this will remove the active class from  
-                                            //previously active menu item 
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
         $('#st').addClass('active');
     });
 </script>

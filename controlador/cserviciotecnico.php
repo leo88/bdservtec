@@ -1,7 +1,7 @@
 <?php
 	
 	/*
-	 	*	version: 1.0 10/08/2016
+	 	*	@Version: V1.0 10/08/2016
 	*/
 
 	include 'modelo/mserviciotecnico.php';
@@ -46,7 +46,7 @@
 	*/
 	if ($idservitecedit && $dispositivo && $marca && $referencia && $actu) 
 	{
-		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $mayusDispositivo, $mayusMarca, $referencia, $descripcion_st, $observacion, $fecha);
+		$serviciotecnico->actualizarServicio($idservitecedit, $mayusDispositivo, $mayusMarca, $referencia, $descripcion_st, $observacion, $fecha);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

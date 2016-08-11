@@ -1,7 +1,7 @@
 <?php 
 
     /*  
-        *   @Version: V1.1 04/08/16
+        *   @Version: V1.2 10/08/16
     */
 
     include 'estilos.php'; 
@@ -45,22 +45,25 @@
     </table> 
 
 <!-- 
-    * Script para el selector de el menu principal
+    * Script para el selector de el menu principal + Colores de las cantidades
 -->
 
 <script type="text/javascript">
     $(document).ready(function() {
 
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
+        $('#consulta').addClass('active');
+
         $('.changeColor').each(function() {
         var cant = $(this).text();
 
         if (cant < 3) {
-            $(this).css("color", "red");
+            $(this).css("color", "red");    // menor a 3 color rojo
         } else if(cant < 6){
-            $(this).css("color", "orange");
+            $(this).css("color", "orange");     // menor a 6 color naranja
         }
         else{
-            $(this).css("color", "green");
+            $(this).css("color", "green");      // color verde si no se cumplen las condiciones anteriores
         }
 
         });

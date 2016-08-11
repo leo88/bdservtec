@@ -1,8 +1,9 @@
 <!--
-		* version: 1.1 28/07/2016
+		* version: 1.2 10/08/2016
 -->
 
-<?php include 'controlador/ccliente.php'; ?>
+<?php include 'controlador/ccliente.php'; 
+include 'estilosTablas.php';?>
 
 <div class="container-fluid lol">
 <div class="eti">Registro de Clientes</div>
@@ -31,11 +32,10 @@
 	</form>
 </div>
 <?php $consultacliente = $cliente->consultar_cliente(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
-				  <thead>
+	<table id="" class="display" cellspacing="0" width="100%">
+		<thead>
             <tr>
-                <th colspan="3">Listado de clientes</th>
+                <th id="title" colspan="12">Listado de clientes</th>
             </tr>
             <tr>
                 <th>ID</th>
@@ -52,12 +52,19 @@
                     <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>
                     <td data-title='Teléfono'><?= $cliente->formato_telefono_general($consultacliente[$i]['telefono']) ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td data-title='Edición'><a href="index.php?pag=7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             <?php endfor; ?>
 
         </tbody>
     </table>
-    </div>
-    </div><!--/row-->
 <br/><br/>
+<!--
+    * Selector en la barra del menú
+-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav li").removeClass("active");//this will remove the active class from previously active menu item
+        $('#registrar').addClass('active');
+    });
+</script>

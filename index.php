@@ -63,16 +63,14 @@
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Servicio Técnico
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
-      						<li><a href="index.php?pag=13">Registro del Servicio</a></li>
-      						<li><a href="index.php?pag=15">Servicio Tecnico Entregado</a></li>
+      						<li><a href="index.php?pag=18">Registro del Servicio</a></li>
+      						<li><a href="index.php?pag=14">Servicio Tecnico Entregado</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="producto">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Productos
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
-      						<li><a href="index.php?pag=3">Producto</a></li>
-      						<li><a href="index.php?pag=7">Proveedor</a></li>
                   <li><a href="index.php?pag=8">Producto</a></li>
                   <li><a href="index.php?pag=11">Compra</a></li>
       						<li><a href="index.php?pag=16">Ultimo Movimiento</a></li>
