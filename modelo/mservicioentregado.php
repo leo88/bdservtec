@@ -21,7 +21,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbservicioentregado
 		 */
-		function actualizar_servicioentregado($numero_orden,$fecha,$costo,$tecnico,$estado)
+		function actualizar_servicioentregado($numero_orden,$costo,$tecnico,$estado)
 		{
 			$sql = "UPDATE tbservicioentregado SET costo = '".$costo."', tecnico = '".$tecnico."', estado = '".$estado."' WHERE $numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);

@@ -18,7 +18,7 @@
     <div class="form-group col-lg-6">
       <label for=""><span style="color:red;">* </span>Estado:</label>
       <select name="estado" class="form-control" required>
-             <option value="" selected><?= $consultaedit[0]['estado']  ?></option>
+             <option value="<?= $consultaedit[0]['estado']  ?>" selected><?= $consultaedit[0]['estado']  ?></option>
              <option value="1">Reparado</option>
              <option value="2">No reparado</option>
              <option value="3">Entregado a peticion</option>
