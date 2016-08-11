@@ -57,7 +57,6 @@
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
                   <li><a href="index.php?pag=10">Venta</a></li>
-      						<li><a href="index.php?pag=16">Ultimo Movimiento</a></li>
                 </ul>
       				</li>
       				<li class="dropdown" id="st">
@@ -74,7 +73,6 @@
       					<ul class="dropdown-menu">
                   <li><a href="index.php?pag=8">Producto</a></li>
                   <li><a href="index.php?pag=11">Compra</a></li>
-      						<li><a href="index.php?pag=16">Ultimo Movimiento</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="consulta">
@@ -89,11 +87,11 @@
       						<li><a href="index.php?pag=35">Servicio Técnico</a></li>
       					</ul>
       				</li>
-      				<li><a href="index.php?pag=46"><span class="glyphicon glyphicon-eye-open"></a></li>
+      				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></a></li>
     			</ul>
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong>User</strong></small></div>
-      				<li><a href="index.php?pag=33"><span class="glyphicon glyphicon-user"></span></a></li>
+      				<li><a href="index.php?pag=4"><span class="glyphicon glyphicon-user"></span></a></li>
      				<li><a href="vista/vsalir.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
    				</ul>
    			</div>
@@ -160,6 +158,9 @@
           case 19:
               include 'vista/vactuserviciotecnico.php';
               break;
+          case 20:
+              include 'vista/vcreditos.php';
+              break;
           case 34:
               include 'vista/vcsexistencia.php';
               break;
@@ -168,9 +169,6 @@
               break;
           case 37:
               include 'vista/vcsventa.php';
-              break;
-          case 46:
-              include 'vista/vcreditos.php';
               break;
           default:
               include 'vista/vhome.php';

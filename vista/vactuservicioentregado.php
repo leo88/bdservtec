@@ -4,11 +4,15 @@
 <?php include("controlador/cservicioentregado.php"); ?>
 	<div class="eti">Editar Servicio Tecnico</div>
 
-	<form action="index.php?pag=14&id=<?= $numero_orden?>" method="POST">
+	<form action="index.php?pag=14&id=<?= $idservent?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Costo:</label>
-			<input type="number" class="form-control" name="costo" value="<?= $consultaedit[0]['costo'] ?>" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
-			<input type="hidden" name="numero_orden" value="<?= $numero_orden ?>">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" class="form-control" name="costo" value="<?= $consultaedit[0]['costo'] ?>" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+                </div>
+            <input type="hidden" name="numero_orden" value="<?= $consultaedit[0]['numero_orden'] ?>">
+			<input type="hidden" name="idserv" value="<?= $idservent ?>">
             <input type="hidden" name="actu" value="actu">
 		</div>
 		<div class="form-group col-lg-6">

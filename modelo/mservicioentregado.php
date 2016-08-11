@@ -23,7 +23,7 @@
 		 */
 		function actualizar_servicioentregado($numero_orden,$costo,$tecnico,$estado)
 		{
-			$sql = "UPDATE tbservicioentregado SET costo = '".$costo."', tecnico = '".$tecnico."', estado = '".$estado."' WHERE $numero_orden = '".$numero_orden."';";
+			$sql = "UPDATE tbservicioentregado SET costo = '".$costo."', tecnico = '".$tecnico."', estado = '".$estado."' WHERE numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);
 		}
 		/*

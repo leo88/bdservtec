@@ -6,7 +6,7 @@
     <div class="edit">                  	
 
 <?php include 'controlador/cserviciotecnico.php'; ?>
-	<div class="eti">Editar Servicio Tecnico</div>
+	<div class="eti">Editar Servicio Técnico</div>
 
 	<form action="index.php?pag=18&id=<?= $numero_orden ?>" method="POST">
 		<div class="form-group col-lg-6">

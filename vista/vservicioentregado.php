@@ -1,27 +1,22 @@
-<!-- Script para generar el saldo que queda  por cancelar-->
-<script>
-    $(function(){
- 	$('#orden').change(function() {
-    	selectedOption = $('option:selected', this);
-    	var a = parseInt($('input[name=saldo1]').val( selectedOption.data('precio')));
-    	var b = parseInt($('input[name=saldo2]').val( selectedOption.data('costo')));
-    	$('input[name=costo]').val( selectedOption.data('precio')- selectedOption.data('costo'));
-	}).change();
-	});
-</script>
+<?php 
+  
+  /*
+      * @Version: V1.0 11/08/2016
+  */
 
-<?php include("controlador/cservicioentregado.php"); ?>
+  include 'controlador/cservicioentregado.php'; 
+?>
 
 <div class="container-fluid lol">
-<div class="eti">Servicio Tecnico Entregado</div>
+<div class="eti">Servicio Técnico Entregado</div>
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>No. Orden:</label>
-             <select name="numero_orden" id="orden" class="form-control" required>
+             <select name="numero_orden" class="form-control" required>
 				<option value=0>Seleccione No. Orden</option>
 				<?php for($i=0;$i<count($numorden2);$i++): ?>
-					<option value="<?= $numorden2[$i]['numero_orden'];?>" <?= $numorden2[$i]['numero_orden'] ?></option>
+					<option value="<?= $numorden2[$i]['numero_orden'];?>"> <?= $numorden2[$i]['numero_orden'] ?></option>
 				<?php endfor; ?>
 			</select>
 		</div>

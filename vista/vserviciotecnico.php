@@ -8,7 +8,7 @@
 
 
 <div class="container-fluid lol">
-<div class="eti">Servicio Tecnico</div>
+<div class="eti">Servicio Técnico</div>
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
