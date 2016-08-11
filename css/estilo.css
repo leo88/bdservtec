@@ -14,7 +14,7 @@
 #vt{
     width: 100%;
     display: inline-block;
-    background-color: #EAF3E8;
+    background-color: #206E26;
     margin: 2% auto 0;
     padding: 2% 4%;
     text-align: center;
@@ -38,11 +38,11 @@
 .etinfo {
     margin-bottom: 2%;
     margin-top: 2%;
-    background-color: #EAF3E8;
+    background-color: #206E26;
     border-radius: 0px;
 }
 .lol {
-    background-color: #EAF3E8;
+    background-color: #206E26;
     border-radius: 20px;
     margin-bottom: 2%;
     margin-top: 3%;
@@ -76,7 +76,7 @@
     width: 100%;
 }
 .fondo {
-    background-color: #EAF3E8;
+    background-color: #206E26;
 }
 .edit {
     text-align: center;
@@ -219,7 +219,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 /*spoiler*/
 /* Navbar*/
 .navbar-default{
-    background-color: #4DB2C6;
+    background-color: #206E26;
 }
 /*Title*/
 .navbar-default .navbar-brand{
@@ -267,7 +267,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 /* mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #4DB2C6;
+    border-color: #206E26;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -294,7 +294,7 @@ input[id^="spoiler"] + label {
   width: 100%;
   margin: 0 auto;
   padding: 5px 20px;
-  background: #EAF3E8;
+  background: #206E26;
   color: #fff;
   text-align: center;
   font-size: 24px;
