@@ -10,7 +10,7 @@
 
 		}
         /*
-		 *función para el ingreso de los datos de la tabla tbservicioentregado
+		 	*	función para el ingreso de los datos de la tabla tbservicioentregado
 		 */
 		function insertar_servicioentregado($numero_orden, $fecha, $costo, $tecnico, $estado)
 		{
@@ -31,7 +31,7 @@
 		 */
 		function eliminar_servicioentregado($numero_orden)
 		{
-			$sql = "DELETE FROM `tbservicioentregado` WHERE `$numero_orden` = '$numero_orden'";
+			$sql = "DELETE FROM `tbservicioentregado` WHERE `numero_orden` = '$numero_orden'";
 			$this -> cons($sql);
 		}
 		/*
@@ -47,7 +47,7 @@
          */
 		function consultar_servicioentregado_id($numero_orden)
 		{
-			$sql = "SELECT * FROM tbservicioentregado WHERE $numero_orden = '$numero_orden' ";
+			$sql = "SELECT * FROM tbservicioentregado WHERE numero_orden = '$numero_orden' ";
 			return $this -> SeleccionDatos($sql);
 		}
         /*

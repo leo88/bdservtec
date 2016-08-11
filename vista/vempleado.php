@@ -2,7 +2,8 @@
 	* version: 1.3 28/07/2016
 -->
 
-<?php include 'controlador/cempleado.php'; ?>
+<?php include 'controlador/cempleado.php';
+include 'estilosTablas.php'; ?>
 
 <div class="container-fluid lol">
 <div class="eti">Vendedor</div>
@@ -35,8 +36,7 @@
 	</form>
 </div>
 <?php $consultaempleado = $empleado->consultar_empleado(); ?>
-<div id='no-more-tables'> <br>
-	<table class="table table-bordered table-hover" id="example">
+	<table id="" class="display" cellspacing="0" width="100%">
 		<thead>
             <tr>
                 <th colspan="12">Listado de Empleados</th>
@@ -60,7 +60,7 @@
 					<td data-title='Teléfono'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono']) ?></td>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="index.php?pag=5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td data-title='Edición'><a href="index.php?pag=5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">
@@ -71,8 +71,6 @@
 			<?php endfor; ?>
         </tbody>
 	</table>
-	</div>
-	</div>
 <br>
 <script type="text/javascript">
     $(document).ready(function () {

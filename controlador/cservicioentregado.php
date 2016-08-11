@@ -11,7 +11,7 @@
 	$idserventedit = isset($_POST['idserv']) ? $_POST['idserv'] : NULL;
 	$numero_orden  = isset($_POST['numero_orden']) ? $_POST['numero_orden'] : NULL;
 	$fecha         = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
-	$costo 				 = isset($_POST['costo']) ? $_POST['costo'] : NULL;
+	$costo 		   = isset($_POST['costo']) ? $_POST['costo'] : NULL;
   $tecnico       = isset($_POST['tecnico']) ? $_POST['tecnico'] : NULL;
 	$estado        = isset($_POST['estado']) ? $_POST['estado'] : NULL;
   $idserventeli  = isset($_POST['idserventeli']) ? $_POST['idserventeli'] : NULL;
