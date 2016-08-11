@@ -1,11 +1,11 @@
-<?php 
-    
-    /*  
+<?php
+
+    /*
         *   @Version: V1.0 04/08/16
     */
 
-    include 'estilos.php'; 
-    include 'modelo/mconsulta.php'; 
+    include 'estilos.php';
+    include 'modelo/mconsulta.php';
     $compra = new Mconsulta();
 
     $consultacompra = $compra->consultarCompraTotal();
@@ -14,7 +14,7 @@
 
 <!--Inicio Compra-->
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler2" /> 
+<input type="checkbox"  id="spoiler2" />
 <label for="spoiler2" >Informe Compra</label>
 <div class="spoiler">
 <div class="info">
@@ -45,19 +45,19 @@
                 </tr>
             <?php endfor; ?>
         </tbody>
-    </table> 
-         
+    </table>
+
 </div>
 </div>
 </div>
-         
+
 <!--Inicio Compra por Producto-->
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler3" /> 
+<input type="checkbox"  id="spoiler3" />
 <label for="spoiler3" >Informe Productos por Compra</label>
 <div class="spoiler">
-<div class="info"> 
-            
+<div class="info">
+
 <table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
@@ -65,29 +65,37 @@
             </tr>
             <tr>
                 <th>No. Compra</th>
-                <th>Referencia</th>                
+                <th>Codigo</th>
+                <th>Referencia</th>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Marca</th>
                 <th>Valor</th>
                 <th>Cantidad</th>
-                <th>Subtotal</th>                
+                <th>Subtotal</th>
             </tr>
         </thead>
         <tbody>
             <?php for($i=0;$i<count($consultacompraproductos);$i++): ?>
                 <tr>
                     <td data-title='No. Compra'><?= $consultacompraproductos[$i]['numero_compra'] ?></td>
-                    <td data-title='Referencia'><?= $consultacompraproductos[$i]['referencia'] ?></td>                   
+                    <td data-title='Codigo'><?= $consultacompraproductos[$i]['idcodigo'] ?></td>
+                    <td data-title='Referencia'><?= $consultacompraproductos[$i]['referencia'] ?></td>
+                    <td data-title='Descripcion'><?= $consultacompraproductos[$i]['descripcion'] ?></td>
+                    <td data-title='Tipo'><?= $consultacompraproductos[$i]['tipo'] ?></td>
+                    <td data-title='Marca'><?= $consultacompraproductos[$i]['marca'] ?></td>
                     <td data-title='Valor'>$ <?= number_format($consultacompraproductos[$i]['valor']) ?></td>
                     <td data-title='Cantidad'><?= $consultacompraproductos[$i]['cantidad'] ?></td>
-                    <td data-title='Subtotal'>$ <?= number_format($consultacompraproductos[$i]['SUBTOTAL']) ?></td> 
+                    <td data-title='Subtotal'>$ <?= number_format($consultacompraproductos[$i]['SUBTOTAL']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
-    </table> 
-    
+    </table>
+
 </div>
 </div>
 </div>
-	    
+
 <!--
     * Selector en la barra del menú
 -->
