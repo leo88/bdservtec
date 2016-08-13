@@ -84,7 +84,7 @@
 				        <th>Cantidad</th>
 				        <th>Valor Unitario</th>
                 <th>Subtotal</th>
-                <th>Código de Barras<th>
+                <th>Código de Barras</th>
 				        <th>Edición</th>
 				<!--<th>Eliminación</th>-->
             </tr>
@@ -96,8 +96,8 @@
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
           <td>$ <?= number_format($consultamovimiento[$i]['valor'] * $consultamovimiento[$i]['cantidad']) ?></td>
-          <td data-title='Código de Barras'><a href="index.php?pag=12&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td><a href="index.php?pag=12&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-info">Code Bar  <span class="glyphicon glyphicon-barcode"></span></a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -153,7 +153,7 @@
                  <ul>
                    <li>Ingrese los datos de la compra (Proveedor y Fecha) y registrelos con el boton <span class="icon-checkmark tama"> REGISTRAR COMPRA</span> este paso se realiza una vez por cada compra</li>
                    <li>Ingrese cada producto referente a esa compra (Referencia, Cantidad Valor) y registrarlos con el boton <span class="glyphicon glyphicon-usd tama2"> COMPRA</span> este paso se puede repetir varias veces por cada compra</li>
-                   <li>Para editar los datos de algun articulo registrado use el boton <span class="icon-pencil2 tama3"></span>  (Solo para la ultima compra activa)</li>
+                   <li>Para editar los datos de algun articulo registrado use el boton <span class="glyphicon glyphicon-edit tama3"> Editar</span>  (Solo para la ultima compra activa)</li>
                </ul>
          <br><br>
       </div>

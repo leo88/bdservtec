@@ -1,5 +1,5 @@
 <!--
-		* version: 1.1 28/07/2016
+		* @Version: V1.1 12/08/2016
 -->
 
 <body class="fondo">
@@ -8,7 +8,7 @@
 <?php include 'controlador/ccliente.php'; ?>
 	<div class="eti">Editar Cliente</div>
 
-	<form action="index.php?pag=6&id=<?= $idcliente?>" method="POST">
+	<form action="cliente&id=<?= $idcliente?>" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Nombre Cliente:</label>
             <input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre'] ?>" maxlength="100" required>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4"><br>
             <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
-			<a href="index.php?pag=6" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
+			<a href="cliente" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
    </div>

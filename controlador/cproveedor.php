@@ -19,8 +19,9 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName 	= $proveedor->cambiarMayusculas($nombre);
-	$newContac 	= $proveedor->cambiarMayusculas($contacto);
+	$newName 		= $proveedor->cambiarMayusculas($nombre);
+	$newContac 		= $proveedor->cambiarMayusculas($contacto);
+	$mayusDireccion = $proveedor->cambiarMayusculas($direccion);
 
 	/*
 		Comprobacion datos para insertar
@@ -28,14 +29,14 @@
 	if ($idproveedor&& $nombre && $telefono && !$actu) 
 	{
         
-		$proveedor->insertar_proveedor($idproveedor,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
+		$proveedor->insertar_proveedor($idproveedor,$newName,$newContac,$telefono,$telefono2,$mayusDireccion,$email);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idproveedit && $nombre && $telefono && $actu) 
 	{
-		$proveedor->actualizar_proveedor($idproveedit,$newName,$newContac,$telefono,$telefono2,$direccion,$email);
+		$proveedor->actualizar_proveedor($idproveedit,$newName,$newContac,$telefono,$telefono2,$mayusDireccion,$email);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

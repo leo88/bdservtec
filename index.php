@@ -18,13 +18,12 @@
 	<link rel="stylesheet" href="css/datatable.css"/>
 	<link rel="stylesheet" href="css/miestilo.css">
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="fonts/style.css">
 	<link rel="stylesheet" href="css/chosen.css">
 	<link rel="stylesheet" href="css/chosen-bootstrap.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/jquery-1.12.3.min.js"></script>
   <script src="js/chosen.jquery.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/helper.script.js"></script>
   <script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-tab.js"></script>
 	<script src="js/jquery-datatable.js"></script>
@@ -39,17 +38,17 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       			</button>
-      			<a class="navbar-brand active" href="index.php">Wold Comunicaciones Servicio Técnico</a>
+      			<a class="navbar-brand active" href="home">Wold Comunicaciones Servicio Técnico</a>
     		</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-    			<ul class="nav navbar-nav">
+    			<ul class="nav navbar-nav navbar-right">
       				<li class="dropdown" id="registrar">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Registrar
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
-      						<li><a href="index.php?pag=2">Proveedor</a></li>
-      						<li><a href="index.php?pag=4">Vendedor</a></li>
-      						<li><a href="index.php?pag=6">Clientes</a></li>
+      						<li><a href="proveedor">Proveedor</a></li>
+      						<li><a href="vendedor">Vendedor</a></li>
+      						<li><a href="cliente">Clientes</a></li>
       					</ul>
       				</li>
       				<li class="dropdown" id="venta">
@@ -89,11 +88,6 @@
       				</li>
       				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></a></li>
     			</ul>
-    			<ul class="nav navbar-nav navbar-right">
-    				<div class="navbar-brand"><small><strong>User</strong></small></div>
-      				<li><a href="index.php?pag=4"><span class="glyphicon glyphicon-user"></span></a></li>
-     				<li><a href="vista/vsalir.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
-   				</ul>
    			</div>
   		</div>
 	</nav>
@@ -104,19 +98,19 @@
           include 'vista/vhome.php';
       }
       switch($page){
-          case 2:
+          case 'proveedor':
               include 'vista/vproveedor.php';
               break;
           case 3:
               include 'vista/vactuproveedor.php';
               break;
-          case 4:
+          case 'vendedor':
               include 'vista/vempleado.php';
               break;
           case 5:
               include 'vista/vactuempleado.php';
               break;
-          case 6:
+          case 'cliente':
               include 'vista/vcliente.php';
               break;
           case 7:

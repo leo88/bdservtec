@@ -1,9 +1,10 @@
 <?php 
 
 	/*
-	 	*	@Version: V1.0 10/08/2016
+	 	*	@Version: V1.1 12/08/2016
 	*/
 	include 'controlador/cserviciotecnico.php'; 
+	include 'estilosTablas.php';
 ?>
 
 
@@ -57,8 +58,7 @@
 	</form>
 </div>
 <?php $consultaserviciotecnico = $serviciotecnico->consultarServicio(); ?>
-<div id='no-more-tables'>
-	<table class="table table-bordered table-hover" id="example">
+<table id="" class="display" cellspacing="0" width="100%">
 		<thead>
             <tr>
                 <th colspan="12">Listado de Servicio Tecnico</th>
@@ -91,7 +91,7 @@
 					<td data-title='Observacion'><?= $consultaserviciotecnico[$i]['observacion'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
 					<td data-title='Fecha'><?= $consultaserviciotecnico[$i]['fecha'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=19&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+					<td data-title='Edición'><a href="index.php?pag=19&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -103,7 +103,6 @@
 			<?php endfor; ?>
         </tbody>
 	</table>
-</div> 
 <br></br>
 <!--
 	* Selector en la barra del menú

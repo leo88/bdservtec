@@ -35,8 +35,8 @@
             <input type="hidden" class="form-control" name="empleado" value="<?= $consultaedit[0]['empleado']  ?>">
 		</div>
 		<div class="form-group col-lg-6"><br>
-            <input type="submit" class="btn btn-success" value="Editar">
-			<a href="index.php?pag=18" class="btn btn-success">Volver</a>
+            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+			<a href="index.php?pag=18" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
     </div> 		

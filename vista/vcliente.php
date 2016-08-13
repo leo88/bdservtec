@@ -1,9 +1,11 @@
 <!--
-		* version: 1.2 10/08/2016
+		* @Version: V1.3 12/08/2016
 -->
 
-<?php include 'controlador/ccliente.php'; 
-include 'estilosTablas.php';?>
+<?php 
+    include 'controlador/ccliente.php'; 
+    include 'estilosTablas.php';
+?>
 
 <div class="container-fluid lol">
 <div class="eti">Registro de Clientes</div>
@@ -52,7 +54,7 @@ include 'estilosTablas.php';?>
                     <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>
                     <td data-title='Teléfono'><?= $cliente->formato_telefono_general($consultacliente[$i]['telefono']) ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td data-title='Edición'><a href="7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             <?php endfor; ?>
 

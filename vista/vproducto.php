@@ -1,8 +1,11 @@
 <!--
-		* @Version: V1.4 10/08/2016
+		* @Version: V1.5 12/08/2016
 -->
 
-<?php include 'controlador/cproducto.php'; ?>
+<?php 
+	include 'controlador/cproducto.php'; 
+	include 'estilosTablas.php';
+?>
 
 <div class="container-fluid lol">
 	<div class="eti">Registrar Producto</div>
@@ -45,8 +48,7 @@
 	</form>
 </div>
 	<?php $consultaproducto = $producto->consultar_producto(); ?>
-		<div id='no-more-tables'>
-			<table class="table table-bordered table-hover" id="example">
+		<table id="" class="display" cellspacing="0" width="100%">
 	  		<thead>
           		<tr>
           		    <th colspan="12">Listado de Productos</th>
@@ -72,7 +74,7 @@
 					<td data-title='Marca'><?= $consultaproducto[$i]['marca'] ?></td>
 					<td data-title='Precio'>$ <?= number_format($consultaproducto[$i]['precio']) ?></td>
 					<td data-title='Ubicacion'><?= $consultaproducto[$i]['ubicacion'] ?></td>
-          			<td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-primary">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
+          			<td data-title='Edición'><a href="index.php?pag=9&id=<?= $consultaproducto[$i]['idcodigo'] ?>" class="btn btn-default">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproducto[$i]['idproducto'] ?>">
@@ -83,8 +85,6 @@
 				<?php endfor; ?>
         	</tbody>
 			</table>
-		</div>
-	</div><!--/row-->
 <br/><br/>
 <!--
 	* Selector en la barra del menú

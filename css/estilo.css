@@ -230,7 +230,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #000000;
+    color: #DDEADF;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
@@ -238,19 +238,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #000000;
+    color: #B5BEB6;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: #389aad;
+    color: #FFFFFF;
+    background-color: #16491A;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
-    background-color: #389aad;
+    background-color: #16491A;
 }
 /* caret */
 .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -259,7 +259,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #000000;
+    border-top-color: #B5BEB6;
     border-bottom-color: #000000;
 }
 .navbar-default .navbar-nav > .open > a .caret,
@@ -274,7 +274,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #389aad;
+    background-color: #16491A;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;

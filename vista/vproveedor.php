@@ -71,7 +71,7 @@ include 'estilosTablas.php'; ?>
 					<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
 					<td data-title='direccion'><?= $consultaproveedor[$i]['direccion'] ?></td>
 					<td data-title='email'><?= $consultaproveedor[$i]['email'] ?></td>
-                    <td data-title='Edición'><a href="index.php?pag=3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td data-title='Edición'><a href="3&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">

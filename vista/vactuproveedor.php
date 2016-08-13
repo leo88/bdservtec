@@ -8,7 +8,7 @@
 		<?php include 'controlador/cproveedor.php'; ?>
 			<div class="eti">Editar Proveedor</div>
 
-			<form action="index.php?pag=2&id=<?= $idprovee?>" method="POST">
+			<form action="proveedor&<?= $idprovee?>" method="POST">
 				<div class="form-group col-md-6 col-lg-6">
 		            <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
 					<input type="text" class="form-control" name="idproveedor" value="<?= $consultaedit[0]['idproveedor'] ?>" readonly>
@@ -42,7 +42,7 @@
 				<div class="form-group col-md-6 col-lg-6">
 					<br>
 		            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
-					<a href="index.php?pag=2" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
+					<a href="proveedor" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
 		        </div>
 			</form>
     </div>
@@ -51,6 +51,6 @@
     $(document).ready(function () {
         $(".nav li").removeClass("active");//this will remove the active class from
                                             //previously active menu item
-        $('#producto').addClass('active');
+        $('#registrar').addClass('active');
     });
 </script>

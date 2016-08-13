@@ -1,17 +1,18 @@
 <?php 
   
   /*
-      * @Version: V1.0 11/08/2016
+      * @Version: V1.1 12/08/2016
   */
 
-  include 'controlador/cservicioentregado.php'; 
+  include 'controlador/cservicioentregado.php';
+  include 'estilosTablas.php'; 
 ?>
 
 <div class="container-fluid lol">
 <div class="eti">Servicio Técnico Entregado</div>
 
 	<form class="blanco" action="" method="POST">
-		<div class="form-group col-sm-6 col-md-6 col-lg-6">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>No. Orden:</label>
              <select name="numero_orden" class="form-control" required>
 				<option value=0>Seleccione No. Orden</option>
@@ -20,22 +21,22 @@
 				<?php endfor; ?>
 			</select>
 		</div>
-		<div class="form-group col-sm-6 col-md-6 col-lg-6">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
              <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly required>
 		</div>
-    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+    <div class="form-group col-sm-6 col-md-6 col-lg-4">
       <label for=""><span style="color:red;">* </span>Costo:</label>
               <div class="input-group">
                 <span class="input-group-addon">$</span>
                 <input type="number" class="form-control" name="costo" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
             </div>
     </div>
-		<div class="form-group col-sm-6 col-md-6 col-lg-6">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Tecnico encargado:</label>
             <input type="text" class="form-control" name="tecnico" pattern="[A-z ]{2,50}" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 50 caracteres" required>
 		</div>
-    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+    <div class="form-group col-sm-6 col-md-6 col-lg-4">
       <label for=""><span style="color:red;">* </span>Estado:</label>
       <select name="estado" class="form-control" required>
              <option value="" selected>Seleccione una Opción</option>
@@ -44,14 +45,13 @@
              <option value="3">Entregado a peticion</option>
      </select>
     </div>
-		<div class="form-group col-sm-6 col-md-6 col-lg-6"> <br>
-      <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>
+		<div class="form-group col-sm-6 col-md-6 col-lg-4"> <br>
+      <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
     </div>
 	</form>
 </div>
 <?php $consultaservicioentregado = $servicioentregado->consultar_servicioentregado(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
+			<table id="" class="display" cellspacing="0" width="100%">
 				  <thead>
             <tr>
                 <th colspan="12">Listado de Servicio T. Entregado</th>
@@ -78,7 +78,7 @@
 					<td data-title='Costo'>$ <?= number_format($consultaservicioentregado[$i]['costo']) ?></td>
 					<td data-title='Tecnico encargado'><?= $consultaservicioentregado[$i]['tecnico'] ?></td>
           <td data-title='Estado'><?= $consultaservicioentregado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="index.php?pag=15&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td data-title='Edición'><a href="index.php?pag=15&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
