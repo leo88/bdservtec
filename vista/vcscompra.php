@@ -8,8 +8,8 @@
     include 'modelo/mconsulta.php';
     $compra = new Mconsulta();
 
-    $consultacompra = $compra->consultarCompraTotal();
-    $consultacompraproductos = $compra->consultarCompra();
+    $consultacompra             = $compra->consultarCompraTotal();
+    $consultacompraproductos    = $compra->consultarCompra();
 ?>
 
 <!--Inicio Compra-->

@@ -1,18 +1,17 @@
+<?php
 
-<?php 
+    /*
+        *   @Version: V1.1 16/08/2016
+    */
+
     include 'estilos.php'; 
     include 'modelo/mconsulta.php'; 
+    
     $venta = new Mconsulta();
-?>
+ 
+    $consultaventa          = $venta->consultarVentaTotal();
+    $consultaventaproductos = $venta->consultarVenta();
 
-<?php 
-$consultaventa = $venta->consultar_venta();
-$consultaventaproductos = $venta->consultar_ventaproducto();
-$consultaventatotal = $venta->consultar_ventatotal();
-$consultadiatotalventas = $venta->consultar_diatotalventas();
-$consultamestotalventas = $venta->consultar_mestotalventas();
-$consultatopcliente = $venta->consultar_top_cliente();
-$consultatopvendedor = $venta->consultar_top_vendedor();
 ?>
 <!--Inicio venta-->
 <div class="row-fluid">
@@ -29,11 +28,11 @@ $consultatopvendedor = $venta->consultar_top_vendedor();
             <tr>
                 <th>No. venta</th>
                 <th>Fecha</th>
-                <th>ID Empleado</th>
-                <th>Empleado</th>
                 <th>ID Cliente</th>
-                <th>Cliente</th>
-                <th>Detalle</th>
+                <th>Nombre Cliente</th>
+                <th>ID Empleado</th>
+                <th>Nombre Empleado</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody>
@@ -41,11 +40,11 @@ $consultatopvendedor = $venta->consultar_top_vendedor();
                 <tr>
                     <td data-title='No. venta'><?= $consultaventa[$i]['numero_venta'] ?></td>
                     <td data-title='Fecha'><?= $consultaventa[$i]['fecha'] ?></td>
-                    <td data-title='ID Empleado'><?= $consultaventa[$i]['idempleado'] ?></td>
-                    <td data-title='Empleado'><?= $consultaventa[$i]['empleado'] ?></td>
                     <td data-title='ID Cliente'><?= $consultaventa[$i]['idcliente'] ?></td>
-                    <td data-title='Cliente'><?= $consultaventa[$i]['nombre'] ?></td>
-                    <td data-title='Detalle'><?= $consultaventa[$i]['detalle'] ?></td>                    
+                    <td data-title='Nombre Cliente'><?= $consultaventa[$i]['cliente'] ?></td>
+                    <td data-title='ID Empleado'><?= $consultaventa[$i]['idempleado'] ?></td>
+                    <td data-title='Nombre Empleado'><?= $consultaventa[$i]['empleado'] ?></td>
+                    <td data-title='Total'>$ <?= number_format($consultaventa[$i]['total']) ?></td>                    
                 </tr>
             <?php endfor; ?>
         </tbody>
@@ -58,7 +57,7 @@ $consultatopvendedor = $venta->consultar_top_vendedor();
 <!--Inicio venta por Producto-->
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler3" /> 
-<label for="spoiler3" >Informe Venta por Producto</label>
+<label for="spoiler3" >Informe Productos por venta</label>
 <div class="spoiler">
 <div class="info"> 
             
@@ -69,19 +68,27 @@ $consultatopvendedor = $venta->consultar_top_vendedor();
             </tr>
             <tr>
                 <th>No. venta</th>
+                <th>IDCódigo</th>
                 <th>Referencia</th>
-                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Tipo</th>   
+                <th>Marca</th>
+                <th>Valor</th>
                 <th>Cantidad</th>
-                <th>Subtotal</th>                
+                <th>Subtotal</th>             
             </tr>
         </thead>
         <tbody>
             <?php for($i=0;$i<count($consultaventaproductos);$i++): ?>
                 <tr>
                     <td data-title='No. venta'><?= $consultaventaproductos[$i]['numero_venta'] ?></td>
+                    <td data-title='IDCódigo'><?= $consultaventaproductos[$i]['idcodigo'] ?></td>
                     <td data-title='Referencia'><?= $consultaventaproductos[$i]['referencia'] ?></td>
-                    <td data-title='Precio'>$ <?= number_format($consultaventaproductos[$i]['precio_venta']) ?></td>
-                    <td data-title='Cantidad'><?= $consultaventaproductos[$i]['cantidad'] ?></td>
+                    <td data-title='Descripción'><?= $consultaventaproductos[$i]['descripcion'] ?></td>
+                    <td data-title='Tipo'><?= $consultaventaproductos[$i]['tipo'] ?></td>
+                    <td data-title='Marca'><?= $consultaventaproductos[$i]['marca'] ?></td>
+                    <td data-title='Valor'>$ <?= number_format($consultaventaproductos[$i]['valor']) ?></td>
+                    <td data-title='Cantidad'><?= $consultaventaproductos[$i]['cantidad']*-1 ?></td>
                     <td data-title='Subtotal'>$ <?= number_format($consultaventaproductos[$i]['SUBTOTAL']) ?></td>
                 </tr>
             <?php endfor; ?>
@@ -92,159 +99,6 @@ $consultatopvendedor = $venta->consultar_top_vendedor();
 </div>
 </div>
  
-<!--Inicio venta Total-->
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler4" /> 
-<label for="spoiler4" >Informe Total Venta</label>
-<div class="spoiler">
-<div class="info">  
-
-	<table id="" class="display" cellspacing="0" width="100%">
-	   <thead>
-            <tr>
-                <th colspan="12">Ventas Totales</th>
-            </tr>
-            <tr>
-                <th>No. venta</th>
-                <th>Fecha</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultaventatotal);$i++): ?>
-                <tr>
-                    <td data-title='No. venta'><?= $consultaventatotal[$i]['numero_venta'] ?></td>
-                    <td data-title='Fecha'><?= $consultaventatotal[$i]['fecha'] ?></td>
-                    <td data-title='Total'>$ <?= number_format($consultaventatotal[$i]['SumaDeSUBTOTAL']) ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-    </table> 
-	
-</div>
-</div>
-</div>	 
-
-<!--Inicio DiaTotalVentas-->
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler5" /> 
-<label for="spoiler5" >Informe Total Venta por Dia</label>
-<div class="spoiler">
-<div class="info">  
-
-	<table id="" class="display" cellspacing="0" width="100%">
-	   <thead>
-            <tr>
-                <th colspan="12">Totales Venta Diarios</th>
-            </tr>
-            <tr>                
-                <th>Fecha</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultadiatotalventas);$i++): ?>
-                <tr>                    
-                    <td data-title='Fecha'><?= $consultadiatotalventas[$i]['fecha'] ?></td>
-                    <td data-title='Total'>$ <?= number_format($consultadiatotalventas[$i]['TOTALVENTADIA']) ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-    </table> 
-	
-</div>
-</div>
-</div>	
-
-<!--Inicio MesTotalVentas-->
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler6" /> 
-<label for="spoiler6" >Informe Total Venta por Mes</label>
-<div class="spoiler">
-<div class="info">  
-
-	<table id="" class="display" cellspacing="0" width="100%">
-	   <thead>
-            <tr>
-                <th colspan="12">Totales Venta Mensuales</th>
-            </tr>
-            <tr> 
-                <th>Mes</th>               
-                <th>Año</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultamestotalventas);$i++): ?>
-                <tr>
-                    <td data-title='Mes'><?= $consultamestotalventas[$i]['Mes'] ?></td>                    
-                    <td data-title='Año'><?= $consultamestotalventas[$i]['year'] ?></td>
-                    <td data-title='Total'>$ <?= number_format($consultamestotalventas[$i]['TOTALMESVENTAS']) ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-    </table> 
-	
-</div>
-</div>
-</div>
-
-<!-- top clientes y empleados-->
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler7" /> 
-<label for="spoiler7" >Top Clientes y Vendedores</label>
-<div class="spoiler">
-<div class="span6">
-<div class="info"> 
-     <table id="" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th colspan="12">Ventas por cliente</th>
-            </tr>
-            <tr>
-                <th>Cliente</th>
-                <th>Numero de ventas</th>
-            </tr>
-        </thead>
-        <tbody>
-           <?php for($i=0;$i<count($consultatopcliente);$i++): ?>
-                <tr>
-                    <td data-title='Cliente'><?= $consultatopcliente[$i]['nombre'] ?></td>
-                    <td data-title='Numero de ventas'><?= $consultatopcliente[$i]['no_ventas'] ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-
-    </table>
-</div>
-</div>
-
-<div class="span6">
-<div class="info"> 
-     <table id="" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th colspan="12">Ventas por Empleado</th>
-            </tr>
-            <tr>
-                <th>Vendedor</th>
-                <th>Numero de ventas</th>
-            </tr>
-        </thead>
-        <tbody>
-           <?php for($i=0;$i<count($consultatopvendedor);$i++): ?>
-                <tr>
-                    <td data-title='Vendedor'><?= $consultatopvendedor[$i]['nombre'] ?></td>
-                    <td data-title='Numero de ventas'><?= $consultatopvendedor[$i]['no_ventas'] ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-
-    </table>
-</div>
-</div>  
-
-
 </div>     
 </div>
 

@@ -80,10 +80,7 @@
       					<ul class="dropdown-menu">
       						<li><a href="index.php?pag=36">Compras</a></li>
       						<li><a href="index.php?pag=37">Ventas</a></li>
-      						<li><a href="index.php?pag=38">Devolucion</a></li>
-      						<li><a href="index.php?pag=39">Contabilidad</a></li>
       						<li><a href="index.php?pag=34">Existencia</a></li>
-      						<li><a href="index.php?pag=35">Servicio Técnico</a></li>
       					</ul>
       				</li>
       				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></a></li>
