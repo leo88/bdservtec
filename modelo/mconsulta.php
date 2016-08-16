@@ -1,7 +1,7 @@
 <?php
 
 	/*  
-        *   @Version: V1.2 04/08/16
+        *   @Version: V1.2 16/08/16
     */
 
 	include 'controlador/conexion.php';
