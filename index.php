@@ -156,7 +156,7 @@
               include 'vista/vcreditos.php';
               break;
           case 21:
-              include 'vista/vtiquete.php'
+              include 'vista/vtiquete.php';
               break; 
           case 34:
               include 'vista/vcsexistencia.php';
