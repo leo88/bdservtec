@@ -1,6 +1,6 @@
 <?php
 
-	/*  
+	/*
         *   @Version: V1.2 16/08/16
     */
 
@@ -68,6 +68,14 @@
 		function consultar_ventatotal_id($idventa)
 		{
 			$sql = "SELECT * FROM csventatotal WHERE numero_venta = '$idventa'";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta tiquete
+		 */
+		function consultarServicioTec()
+		{
+			$sql = "SELECT tbserviciotecnico.numero_orden AS numero_orden,tbserviciotecnico.id_cliente AS id_cliente,tbserviciotecnico.dispositivo AS dispositivo,tbserviciotecnico.marca AS marca,tbserviciotecnico.referencia AS referencia,tbserviciotecnico.descripcion_st AS descripcion_st,tbserviciotecnico.observacion AS observacion,tbserviciotecnico.empleado AS empleado,tbserviciotecnico.fecha AS fecha FROM tbserviciotecnico";
 			return $this->SeleccionDatos($sql);
 		}
 	}

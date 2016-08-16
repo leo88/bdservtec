@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/impreso.css" media="print"/>
 <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700' rel='stylesheet' type='text/css'>
 <?php
-$consultast          = $st->consultar_st_id();
+$consultast          = $st->consultarServicioTec();
 $idprint             = $consultast[0]['numero_orden'];
 //echo $idprint;
 
