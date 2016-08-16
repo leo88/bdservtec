@@ -12,7 +12,7 @@
 <div class="eti">Servicio Técnico</div>
 
 	<form class="blanco" action="" method="POST">
-		<div class="form-group col-sm-6 col-md-4 col-lg-4">
+		<div class="col-sm-6 col-md-4 col-lg-4">
             <label for=""><span style="color:red;">* </span>Cliente:</label>
             <select name="id_cliente" class="chzn-select form-control" required>
 				<option value=0>Seleccione cliente</option>
