@@ -89,7 +89,9 @@ body{
 .blanco {
     color: #FFF;
 }
-
+.boton {
+	text-align: center;
+}
 /*HOME*/
 .fondo_home{
     background-image: url(../img/fondo.jpg);
