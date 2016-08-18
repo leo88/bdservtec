@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-08-2016 a las 16:00:52
+-- Tiempo de generación: 18-08-2016 a las 16:29:03
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `tbempleado` (
   `direccion` varchar(50) NOT NULL,
   `telefono` varchar(20) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
+  `perfil` enum('Administrador','Tecnico','Vendedor') NOT NULL,
   `estado` enum('Activo','Inactivo') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
