@@ -56,6 +56,7 @@ include 'estilosTablas.php'; ?>
 				<th>Direccion</th>
 				<th>Teléfono Personal</th>
 				<th>Email</th>
+				<th>Perfil</th>
 				<th>Estado</th>
 				<th>Edición</th>
             </tr>
@@ -68,6 +69,7 @@ include 'estilosTablas.php'; ?>
 					<td data-title='Direccion'><?= $consultaempleado[$i]['direccion'] ?></td>
 					<td data-title='Teléfono'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono']) ?></td>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
+					<td data-title='Perfil'><?= $consultaempleado[$i]['perfil'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
           <td data-title='Edición'><a href="5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
