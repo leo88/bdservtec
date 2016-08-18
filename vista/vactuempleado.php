@@ -8,7 +8,7 @@
 <?php include 'controlador/cempleado.php'; ?>
 	<div class="eti">Editar Empleado</div>
 
-	<form action="vendedor&id=<?= $idemple?>" method="POST">
+	<form action="empleado&id=<?= $idemple?>" method="POST">
 		<div class="form-group col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Cédula de Ciudadania:</label>
             <input type="text" class="form-control" name="idempleado" value="<?= $consultaedit[0]['idempleado'] ?>" readonly>
@@ -43,7 +43,7 @@
 		</div>
 		<div class="form-group col-lg-12">
             <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
-			<a href="vendedor" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
+			<a href="empleado" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>
 </div>

@@ -47,7 +47,7 @@
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
       						<li><a href="proveedor">Proveedor</a></li>
-      						<li><a href="vendedor">Vendedor</a></li>
+      						<li><a href="empleado">Empleado</a></li>
       						<li><a href="cliente">Clientes</a></li>
       					</ul>
       				</li>
@@ -101,7 +101,7 @@
           case 3:
               include 'vista/vactuproveedor.php';
               break;
-          case 'vendedor':
+          case 'empleado':
               include 'vista/vempleado.php';
               break;
           case 5:
