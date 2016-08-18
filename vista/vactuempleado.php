@@ -12,6 +12,7 @@
 		<div class="form-group col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Cédula de Ciudadania:</label>
             <input type="text" class="form-control" name="idempleado" value="<?= $consultaedit[0]['idempleado'] ?>" readonly>
+            <input type="hidden" name="perfil" value="<?= $consultaedit[0]['perfil'] ?>">
 			<input type="hidden" name="idemple" value="<?= $idemple ?>">
             <input type="hidden" name="actu" value="actu">
 		</div>

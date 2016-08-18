@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include 'controlador/conexion.php';
+	include 'functions.php';
 
 	class Mempleado extends Funciones
 	{
@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbempleado
 		 */
-		function insertar_empleado($idempleado, $nombre, $direccion, $telefono, $email, $estado)
+		function insertar_empleado($idempleado, $nombre, $direccion, $telefono, $email, $estado, $perfil)
 		{
-			$sql = "INSERT INTO tbempleado (idempleado, nombre, direccion, telefono, email, estado)
-						VALUES ('".$idempleado."','".$nombre."','".$direccion."','".$telefono."','".$email."','".$estado."');";
+			$sql = "INSERT INTO tbempleado (idempleado, nombre, direccion, telefono, email, estado, perfil)
+						VALUES ('".$idempleado."','".$nombre."','".$direccion."','".$telefono."','".$email."','".$estado."','".$perfil."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbempleado
 		 */
-		function  actualizar_empleado($idempleado, $nombre, $direccion, $telefono, $email, $estado)
+		function  actualizar_empleado($idempleado, $nombre, $direccion, $telefono, $email, $estado, $perfil)
 		{
-			$sql = "UPDATE tbempleado SET nombre = '".$nombre."',direccion = '".$direccion."',telefono = '".$telefono."',email = '".$email."',estado = '".$estado."' WHERE idempleado = '".$idempleado."';";
+			$sql = "UPDATE tbempleado SET nombre = '".$nombre."',direccion = '".$direccion."',telefono = '".$telefono."',email = '".$email."',estado = '".$estado."',perfil = '".$perfil."' WHERE idempleado = '".$idempleado."';";
 			$this -> cons($sql);
 		}
 		/*

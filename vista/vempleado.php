@@ -6,7 +6,7 @@
 include 'estilosTablas.php'; ?>
 
 <div class="container-fluid lol">
-<div class="eti">Vendedor</div>
+<div class="eti">Empleado</div>
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
@@ -29,6 +29,15 @@ include 'estilosTablas.php'; ?>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
            <label for="">Email:</label>
             <input type="email" class="form-control" name="email" maxlength="70">
+		</div>
+		<div class="form-group col-sm-12 col-md-12 col-lg-4">
+            <label for=""><span style="color:red;">* </span>Perfil:</label>
+            <select name="perfil" class="form-control" required>
+                <option value="">Seleccione una Opción</option>
+                <option value="1">Administrador</option>
+                <option value="2">Tecnico</option>
+                <option value="3" selected>Vendedor</option>
+            </select>
 		</div>
 		 <div class="form-group col-sm-6 col-md-6 col-lg-4"> <br>
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>

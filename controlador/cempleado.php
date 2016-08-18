@@ -11,6 +11,7 @@
   	$telefono	   = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;
   	$email         = isset($_POST['email']) ? $_POST['email'] : NULL;
   	$estado        = isset($_POST['estado']) ? $_POST['estado'] : NULL;
+  	$perfil        = isset($_POST['perfil']) ? $_POST['perfil'] : NULL;
 	$idempleeli    = isset($_POST['idempleeli ']) ? $_POST['idempleeli '] : NULL;
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idemple       = isset($_GET['id']) ? $_GET['id'] : NULL;
@@ -23,16 +24,16 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($idempleado && $nombre && $direccion && $telefono && $estado && !$actu)
+	if ($idempleado && $nombre && $direccion && $telefono && $estado && $perfil && !$actu)
 	{
-		$empleado->insertar_empleado($idempleado,$mayusNombre,$mayusDireccion,$telefono,$email,$estado);
+		$empleado->insertar_empleado($idempleado,$mayusNombre,$mayusDireccion,$telefono,$email,$estado,$perfil);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idempleedit && $nombre && $actu)
 	{
-		$empleado->actualizar_empleado($idempleedit,$mayusNombre,$mayusDireccion,$telefono,$email,$estado);
+		$empleado->actualizar_empleado($idempleedit,$mayusNombre,$mayusDireccion,$telefono,$email,$estado,$perfil);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

@@ -32,7 +32,7 @@
    	        <input type="text" class="form-control" name="marca" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required>
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for=""><span style="color:red;">* </span>Precio:</label>
+   	        <label for=""><span style="color:red;">* </span>Precio sugerido de venta:</label>
    	        <div class="input-group">
   						<span class="input-group-addon">$</span>
   						<input type="number" class="form-control" name="precio" placeholder="Valor en pesos" pattern="[0-9]{1,11}" min="0" title="Solo se permite valores validos" required>
