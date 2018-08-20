@@ -1,5 +1,5 @@
 <!--
-	* version: 1.3 28/07/2016
+	* version: 1.4 19/08/2018
 -->
 
 <?php include 'controlador/cempleado.php';
@@ -11,7 +11,7 @@ include 'estilosTablas.php'; ?>
 	<form class="blanco" action="" method="POST">
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Cédula de Ciudadania:</label>
-            <input type="text" class="form-control" name="idempleado" pattern="[0-9]{5,10}" title="Se requiere un numero de identificación valido sin espacios"required>
+            <input type="text" class="form-control" name="idempleado" pattern="[0-9]{5,10}" maxlength="10" title="Se requiere un numero de identificación valido sin espacios"required>
             <input type="hidden" name="estado" value="Activo">
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
@@ -30,7 +30,7 @@ include 'estilosTablas.php'; ?>
            <label for="">Email:</label>
             <input type="email" class="form-control" name="email" maxlength="70">
 		</div>
-		<div class="form-group col-sm-12 col-md-12 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Perfil:</label>
             <select name="perfil" class="form-control" required>
                 <option value="">Seleccione una Opción</option>
