@@ -8,36 +8,36 @@ include 'estilosTablas.php'; ?>
 <div class="container-fluid lol">
 	<div class="eti">Proveedor</div>
    	<form class="blanco" action="" method="POST">
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
-   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" placeholder="Nit o Cedula de Ciudadanía" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>
+   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" placeholder="Nit o Cedula de Ciudadanía" maxlength="12" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Nombre proveedor:</label>
-   	        <input type="text" class="form-control" name="nombre" maxlength="50" required>
+   	        <input type="text" class="form-control" name="nombre" maxlength="150" required>
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for="">Contacto:</label>
-   	        <input type="text" class="form-control" name="contacto" placeholder="Nombre del contacto" maxlength="50">
+   	        <input type="text" class="form-control" name="contacto" placeholder="Nombre del contacto" maxlength="100">
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Telefono proveedor:</label>
-   	        <input type="number" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
+   	        <input type="text" class="form-control" name="telefono" pattern="[0-9]{7,20}" maxlength="20" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for="">Telefono contacto:</label>
-   	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
+   	        <input type="text" class="form-control" name="telefono2" pattern="[0-9]{7,20}" maxlength="20" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for="">Dirección:</label>
-   	        <input type="text" class="form-control" name="direccion" maxlength="50">
+   	        <input type="text" class="form-control" name="direccion" maxlength="100">
 		</div>
-		<div class="form-group col-md-6 col-lg-4">
+		<div class="form-group col-sm-6 col-md-6 col-lg-4">
    	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email" maxlength="90">
+   	        <input type="email" class="form-control" name="email" maxlength="100">
 		</div>
 
-			<div class="form-group col-md-6"> <br>
+			<div class="form-group col-sm-6 col-md-6 col-lg-6"> <br>
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
       		</div>
 	</form>

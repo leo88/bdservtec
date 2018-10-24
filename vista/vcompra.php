@@ -127,7 +127,7 @@
 				<?php endfor; ?>
 			</select>
 		</div>
-		<div class="form-group campo col-md-4">
+		<div class="form-group campo col-sm-6 col-md-4 col-lg-6">
            <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly>
 		</div>

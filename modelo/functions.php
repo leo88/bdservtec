@@ -12,7 +12,7 @@
                 $conexionBD = new conexion();
                 $conexionBD -> conectarBD();
                 $conexionBD -> ejeCon($sentencia_sql, 1);
-                return $conexion -> getUltimoId();
+                return $conexionBD -> getUltimoId();
         }
         
         /*
