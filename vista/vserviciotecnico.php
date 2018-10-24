@@ -51,7 +51,7 @@
 			</select>     
 			<input type="hidden" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" required >    
 		</div>
-		 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>  
+		 <div class="form-group col-sm-6 col-md-7 col-lg-7"> <br>  
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-send"></span></button>
             <a href="index.php?pag=21" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
         </div>

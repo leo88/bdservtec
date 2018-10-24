@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!--
   * version: 1.5 26/07/2016
@@ -83,7 +83,7 @@
       						<li><a href="index.php?pag=34">Existencia</a></li>
       					</ul>
       				</li>
-      				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></a></li>
+      				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></span></a></li>
     			</ul>
    			</div>
   		</div>
