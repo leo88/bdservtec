@@ -49,7 +49,7 @@
 
 <div class="container-fluid lol">
 	<form action="" method="POST" class="blanco">
-		<div class="col-md-4">
+		<div class="col-sm-6 col-md-4 col-lg-4">
           	<input type="hidden" name="motivo" value="Venta" required>
           	<input type="hidden" name="idgeneral" value="<?= $idgeneral2[0]['numero_venta'] ?>">
            	<label for=""><span style="color:red;">* </span>Codigo:</label><br>
@@ -61,36 +61,36 @@
 				<?php endfor; ?>
 			</select>
 		</div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-sm-6 col-md-4 col-lg-4">
            <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
 		</div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-sm-6 col-md-4 col-lg-4">
           <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
           <div class="input-group">
               <span class="input-group-addon">$</span>
               <input type="number" class="form-control" id="price1" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
           </div>
 		</div>
-		<div class="form-group col-md-3">
+		<div class="form-group col-sm-6 col-md-3 col-lg-4">
            <label for="">Tipo de Producto:</label>
             <input type="text" class="form-control" name="desc" readonly>
 		</div>
-		<div class="form-group col-md-3">
+		<div class="form-group col-sm-6 col-md-3 col-lg-4">
            <label for="">Modelo/Referencia:</label>
             <input type="text" class="form-control" name="refe" readonly>
 		</div>
-		<div class="form-group col-md-3">
+		<div class="form-group col-sm-6 col-md-3 col-lg-4">
            <label for="">Marca:</label>
             <input type="text" class="form-control" name="mark" readonly>
 		</div>
-		<div class="form-group col-md-3">
+		<div class="form-group col-sm-6 col-md-3 col-lg-4">
            <label for="">Clase de Dispositivo:</label>
             <input type="text" class="form-control" name="tipo" readonly>
 		</div>
     <div class="boton">
       <div class="form-group campo"><br>
-         <button type="submit" name="Sale" class="btn btn-warning" value="-"><span class="glyphicon glyphicon-shopping-cart"> INCLUIR ARTICULO</span></button>
+         <button type="submit" name="Sale" class="btn btn-warning" value="-">incluir articulo <span class="glyphicon glyphicon-shopping-cart"></span></button>
       </div>
     </div>
 	</form>
@@ -98,7 +98,7 @@
 
 <?php $consultamovimiento = $movimiento->consultar_movimiento_v($idgeneral2[0]['numero_venta']); ?>
         <div id=''>
-			<table class="table">
+			<table class="table blanco">
 			<thead>
             <tr>
                 <th colspan="12">Ultimo movimiento por venta</th>
@@ -119,7 +119,7 @@
 					<td><?= $consultamovimiento[$i]['cantidad'] * -1 ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor'] * ($consultamovimiento[$i]['cantidad'] *-1)) ?></td>
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -141,7 +141,7 @@
     <div class="container-fluid lol">
         <div class="eti">Registrar Venta</div>
         <form action="" method="POST" class="blanco">
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <label for=""><span style="color:red;">* </span>Cliente:</label><br>
             <select name="cliente" class="chzn-select form-control" >
 				<option value=0>Seleccione cliente</option>
@@ -150,11 +150,11 @@
 				<?php endfor; ?>
 			</select>
 		</div>
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-xs-12 col-sm-6 col-md-4 col-lg-3">
            <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly required>
 		</div>
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-xs-12 col-sm-6 col-md-4 col-lg-3">
            <label for=""><span style="color:red;">* </span>Empleado:</label>
             <select name="empleado" class="form-control" >
 				<option value=0>Seleccione empleado</option>
@@ -174,7 +174,7 @@
 
 
 <div class="col-lg-3 col-md-offset-9">
-	<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
+	<a href="home.php?pag=40" target="_blank" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
 </div>
 
 <br/><br/><br/>

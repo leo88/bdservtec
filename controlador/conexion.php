@@ -2,35 +2,51 @@
 	class conexion {
 		var $link;
 		var $resultado;
+		var $acentos;
+		var $mysqli;
 		
-		function conexion() {} // Constructor para inicializar clase
-		function conectarBD() {
-			include("configuracion.php");
-			$this -> link = mysqli_connect ($serv_bd, $usu_bd, $pass_bd);
-			if(!$this -> link) {
+		protected $ultimoid = "";
+
+		public function __construct() {} // Constructor para inicializar clase
+		public function conectarBD() {
+			include_once("configuracion.php");
+
+			ini_set('memory_limit', '-1');
+			ini_set('max_execution_time', 100);
+
+			$this -> mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
+			if($this -> mysqli -> connect_error) {
 				die("<h4> No se logro conectar</h4>");
 			}
-			$bd2 = mysqli_select_db($this->link,$bd);
+			/*$bd2 = mysqli_select_db($this->link,$bd);
 			if(!$bd2) {
 				echo "No se puede conectar a la BD";
-			}
+			}*/
+			$acentos = $this -> mysqli -> query("SET NAMES 'utf8'");
 		}
-		function desconectarBD() {
-			mysqli_close($this -> link);
+		public function desconectarBD() {
+			$this -> mysql -> close();
 		}
+
 		function ejeCon($con, $op) {
-			$this -> resultado = mysqli_query($this->link,$con) or die("La consulta fallo: ". mysqli_error($this->link));
+			$this -> resultado = $this -> mysqli -> query($con) or die("La consulta fallo: ". $this -> mysqli -> error);
 			if($op == 0) {
-				while ($linea = mysqli_fetch_array($this -> resultado)) {
+				while ($linea = $this -> resultado -> fetch_assoc()) {
 					$arrayResultado[] = $linea;
 				}
 			} else {
+				$this -> ultimoid = $this -> mysqli -> insert_id;
+				return $this -> ultimoid;
 				$arrayResultado[] = 0;
 			}
 			$resarr = isset ($arrayResultado) ? $arrayResultado: NULL;
 			if($resarr) {
 				return $arrayResultado;
 			}
+		}
+
+		public function getUltimoId(){
+			return $this->ultimoid;
 		}
 	}
 ?>

@@ -17,27 +17,27 @@
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for=""><span style="color:red;">* </span>Nombre proveedor:</label>
-		            <input type="text" class="form-control" name="nombre"  value="<?= $consultaedit[0]['nombre']  ?>" maxlength="50" readonly>
+		            <input type="text" class="form-control" name="nombre"  value="<?= $consultaedit[0]['nombre']  ?>" maxlength="150" readonly>
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for="">contacto:</label>
-		            <input type="text" class="form-control" name="contacto" value="<?= $consultaedit[0]['contacto'] ?>" maxlength="50" >
+		            <input type="text" class="form-control" name="contacto" value="<?= $consultaedit[0]['contacto'] ?>" maxlength="100">
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for="">Telefono proveedor:</label>
-		            <input type="number" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres" required>
+		            <input type="number" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" pattern="[0-9]{7,20}" maxlength="20" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres" required>
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for="">Telefono contacto:</label>
-		            <input type="number" class="form-control" name="telefono2"  value="<?= $consultaedit[0]['telefono2']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
+		            <input type="number" class="form-control" name="telefono2"  value="<?= $consultaedit[0]['telefono2']  ?>" pattern="[0-9]{7,20}" maxlength="20" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for="">Dirección:</label>
-		            <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion'] ?>" maxlength="70">
+		            <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion'] ?>" maxlength="100">
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<label for="">Email:</label>
-		            <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email'] ?>" maxlength="70">
+		            <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email'] ?>" maxlength="100">
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<br>

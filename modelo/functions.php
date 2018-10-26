@@ -1,7 +1,7 @@
 <?php
 	class Funciones {
         
-		function functions() { }
+		function __construct() { }
 		
 		/*
          * Función de utilidad para las sentencias SQL de inserción (INSERT), actualización (UPDATE) y eliminación (DELETE) 
@@ -12,6 +12,7 @@
                 $conexionBD = new conexion();
                 $conexionBD -> conectarBD();
                 $conexionBD -> ejeCon($sentencia_sql, 1);
+                return $conexionBD -> getUltimoId();
         }
         
         /*

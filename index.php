@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!--
   * version: 1.5 26/07/2016
 -->
 
 <head>
-	<title>Wold Servtec</title>
+	<title>Servicio Tecnico</title>
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/servtec_1.ico">
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
   <?php date_default_timezone_set('America/Bogota'); ?>
 
@@ -83,7 +84,7 @@
       						<li><a href="index.php?pag=34">Existencia</a></li>
       					</ul>
       				</li>
-      				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></a></li>
+      				<li id="creditos"><a href="index.php?pag=20"><span class="glyphicon glyphicon-eye-open"></span></a></li>
     			</ul>
    			</div>
   		</div>
@@ -163,6 +164,9 @@
               break;
           case 37:
               include 'vista/vcsventa.php';
+              break;
+          case 40:
+              include 'vista/vrecibo.php';
               break;
           default:
               include 'vista/vhome.php';

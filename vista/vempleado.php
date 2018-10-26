@@ -16,7 +16,7 @@ include 'estilosTablas.php'; ?>
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Nombre del empleado:</label>
-            <input type="text" class="form-control" name="nombre" placeholder="No utlizar la letra 'ñ' ni tildes" pattern="[A-z ]{2,50}" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 50 caracteres" required>
+            <input type="text" class="form-control" name="nombre" placeholder="No utlizar la letra 'ñ' ni tildes" pattern="[A-z ]{2,100}" maxlength="100" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 50 caracteres" required>
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Dirección del empleado:</label>
@@ -24,11 +24,11 @@ include 'estilosTablas.php'; ?>
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Teléfono del empleado:</label>
-            <input type="text" class="form-control" name="telefono" pattern="[0-9]{5,10}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres" required>
+            <input type="text" class="form-control" name="telefono" pattern="[0-9]{5,20}" maxlength="20" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres" required>
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
            <label for="">Email:</label>
-            <input type="email" class="form-control" name="email" maxlength="70">
+            <input type="email" class="form-control" name="email" maxlength="100">
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Perfil:</label>
@@ -71,7 +71,7 @@ include 'estilosTablas.php'; ?>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Perfil'><?= $consultaempleado[$i]['perfil'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td data-title='Edición'><a href="5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">

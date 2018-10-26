@@ -67,7 +67,7 @@
 		 */
 		function consultar_ventatotal_id($idventa)
 		{
-			$sql = "SELECT * FROM csventatotal WHERE numero_venta = '$idventa'";
+			$sql = "SELECT * FROM csventaproductos WHERE numero_venta = '$idventa'";
 			return $this->SeleccionDatos($sql);
 		}
 		/*
@@ -75,7 +75,20 @@
 		 */
 		function consultarServicioTec()
 		{
-			$sql = "SELECT tbserviciotecnico.numero_orden AS numero_orden,tbserviciotecnico.id_cliente AS id_cliente,tbserviciotecnico.dispositivo AS dispositivo,tbserviciotecnico.marca AS marca,tbserviciotecnico.referencia AS referencia,tbserviciotecnico.descripcion_st AS descripcion_st,tbserviciotecnico.observacion AS observacion,tbserviciotecnico.empleado AS empleado,tbserviciotecnico.fecha AS fecha FROM tbserviciotecnico";
+			$sql = "SELECT st.numero_orden AS numero_orden, cl.nombre AS clientenombre, cl.telefono AS clientetelefono, em.nombre AS empleadonombre,st.id_cliente AS id_cliente, st.dispositivo AS dispositivo,st.marca AS marca,st.referencia AS referencia,st.descripcion_st AS descripcion_st,st.observacion AS observacion,st.empleado AS empleado,st.fecha AS fecha FROM tbserviciotecnico st
+					INNER JOIN tbcliente AS cl ON cl.idcliente = st.id_cliente
+					INNER JOIN tbempleado AS em ON em.idempleado = st.empleado";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la tbventa
+		 */
+		function consultar_venta_id()
+		{
+			$sql = "SELECT vt.numero_venta, cl.nombre as cliente, vt.fecha, em.nombre as empleado FROM tbventa vt 
+						INNER JOIN tbcliente AS cl ON cl.idcliente = vt.idcliente
+						INNER JOIN tbempleado AS em ON em.idempleado = vt.idempleado
+			ORDER BY numero_venta desc limit 1";
 			return $this->SeleccionDatos($sql);
 		}
 	}

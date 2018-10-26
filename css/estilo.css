@@ -1,6 +1,44 @@
 body{
-	background-color: #EAF3E8;
+	background:linear-gradient(135deg, #006933, #00C851) fixed;
+  background-repeat: no-repeat;
 }
+
+.btn {
+    padding: 12px 22px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.btn-xs {
+    padding: 4px 20px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
 .span-color{
 	background: #CCCCCC;
 }
@@ -17,7 +55,7 @@ body{
 #vt{
     width: 100%;
     display: inline-block;
-    background-color: #206E26;
+    background-color: #07913E;
     margin: 2% auto 0;
     padding: 2% 4%;
     text-align: center;
@@ -41,11 +79,11 @@ body{
 .etinfo {
     margin-bottom: 2%;
     margin-top: 2%;
-    background-color: #206E26;
+    background-color: #07913E;
     border-radius: 0px;
 }
 .lol {
-    background-color: #206E26;
+    background-color: transparent;
     border-radius: 20px;
     margin-bottom: 2%;
     margin-top: 3%;
@@ -224,7 +262,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 /*spoiler*/
 /* Navbar*/
 .navbar-default{
-    background-color: #206E26;
+    background: transparent;
+    border-color: transparent;
+    /*background-color: #206E26;*/
 }
 /*Title*/
 .navbar-default .navbar-brand{
@@ -232,7 +272,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #DDEADF;
+    color: #fff;
+    font-size: 18.5px;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
@@ -240,19 +281,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #B5BEB6;
+    color: #fff;
+    font-size: 15.5px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #FFFFFF;
-    background-color: #16491A;
+    background-color: #00C851;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
-    background-color: #16491A;
+    background-color: #00C851;
 }
 /* caret */
 .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -261,7 +303,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #B5BEB6;
+    border-top-color: #fff;
     border-bottom-color: #000000;
 }
 .navbar-default .navbar-nav > .open > a .caret,
@@ -272,11 +314,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', end
 }
 /* mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #206E26;
+    border-color: #00C851;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #16491A;
+    background-color: #00C851;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -299,7 +341,7 @@ input[id^="spoiler"] + label {
   width: 100%;
   margin: 0 auto;
   padding: 5px 20px;
-  background: #206E26;
+  background: #07913E;
   color: #fff;
   text-align: center;
   font-size: 24px;
