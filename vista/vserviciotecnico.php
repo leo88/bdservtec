@@ -91,7 +91,7 @@
 					<td data-title='Observacion'><?= $consultaserviciotecnico[$i]['observacion'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
 					<td data-title='Fecha'><?= $consultaserviciotecnico[$i]['fecha'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=19&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+					<td data-title='Edición'><a href="index.php?pag=19&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

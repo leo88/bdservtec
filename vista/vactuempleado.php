@@ -42,7 +42,7 @@
                 Escribir Inactivo en caso de que el empleado no este laborando
 		</div>
 		<div class="form-group col-lg-12">
-            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+            <button type="submit" class="btn btn-success">Guardar cambios <span class="glyphicon glyphicon-transfer"></span></button>
 			<a href="empleado" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
         </div>
 	</form>

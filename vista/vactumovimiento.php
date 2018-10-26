@@ -24,7 +24,7 @@
           </div>
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6"><br>
-            <input type="submit" class="btn btn-success" value="Editar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" class="btn btn-success" value="Guardar cambios">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="index.php?pag=16" class="btn btn-primary"><span class="glyphicon glyphicon-transfer"></span> Volver movimiento</a>
             <a href="home.php?pag=24" class="btn btn-warning"><span class="glyphicon glyphicon-shopping-cart"></span> Volver venta</a>
         </div>
