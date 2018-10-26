@@ -71,7 +71,7 @@ include 'estilosTablas.php'; ?>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Perfil'><?= $consultaempleado[$i]['perfil'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td data-title='Edición'><a href="5&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">

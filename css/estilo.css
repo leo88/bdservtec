@@ -11,7 +11,16 @@ body{
     text-transform: uppercase;
     border-radius: 10px;
 }
- 
+
+.btn-xs {
+    padding: 4px 20px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }
@@ -46,7 +55,7 @@ body{
 #vt{
     width: 100%;
     display: inline-block;
-    background-color: #206E26;
+    background-color: #07913E;
     margin: 2% auto 0;
     padding: 2% 4%;
     text-align: center;
@@ -70,7 +79,7 @@ body{
 .etinfo {
     margin-bottom: 2%;
     margin-top: 2%;
-    background-color: #206E26;
+    background-color: #07913E;
     border-radius: 0px;
 }
 .lol {

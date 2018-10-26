@@ -8,12 +8,13 @@ body {
     width: 7cm;
     font-weight: bold;
     text-align: center;
-    border-bottom-style: dashed;    
+    border-bottom-style: solid;    
     border-bottom-width: 1.8px;
     font-size: 36px;
     font-family: 'BenchNine', sans-serif;
     font-weight: bold;
 }
+
 #logob {
     font-size: 0.32cm;
     color: #000;    
@@ -21,6 +22,7 @@ body {
     font-size: 14px;
     font-family: 'BenchNine', sans-serif;
 }
+
 #encabezado {
     font-size: 14px;    
 	width: 7cm;	
@@ -28,21 +30,28 @@ body {
     border-bottom-width: 4px;
     font-family: 'BenchNine', sans-serif;
 }
+
 #encabezado th {
 	font-size: 16px;	
 	padding: 4px;	
 	color: #000;
     text-align: center;
 }
+
 #encabezado td {
     font-weight: bold;
     font-size: 16px;
 	padding: 4px;	
 	color: #000;
 }
+
+table{
+    border-bottom: 2px solid black;
+}
+
 #recibo {
     font-size: 16px;
-	background: #fff;
+	background: transparent;
 	width: 7cm;
 	border-collapse: collapse; 
     font-family: 'BenchNine', sans-serif;
@@ -57,7 +66,7 @@ body {
 }
 #recibo td {
     font-size: 16px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #000;
 	color: #000;
 	padding: 6px 8px;
     text-align: center;
@@ -108,7 +117,10 @@ body {
 .barra4{
     margin-left: 10px;
 }
-
+#patron{
+    border-bottom: 2px dashed black;
+    width: 265px;
+}
 @media print{
     #boton {   
         visibility: hidden;

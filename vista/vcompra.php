@@ -40,7 +40,7 @@
 
 <div class="container-fluid lol">
 	<form action="" method="POST" class="blanco">
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-lg-3 col-md-3 col-sm-3">
            	<input type="hidden" name="motivo" value="Compra" required>
            	<input type="hidden" name="idgeneral" value="<?= $idgeneral3[0]['numero_compra'] ?>">
             <label for=""><span style="color:red;">* </span>Código Producto:</label><br>
@@ -52,11 +52,11 @@
                <?php endfor; ?>
              </select>
 		</div>
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-lg-3 col-md-3 col-sm-3">
             <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
 		</div>
-		<div class="form-group campo col-md-3">
+		<div class="form-group campo col-lg-3 col-md-3 col-sm-3">
            <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
           <div class="input-group">
               <span class="input-group-addon">$</span>

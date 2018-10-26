@@ -6,9 +6,10 @@
 -->
 
 <head>
-	<title>Wold Servtec</title>
+	<title>Servicio Tecnico</title>
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/servtec_1.ico">
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
   <?php date_default_timezone_set('America/Bogota'); ?>
 
@@ -163,6 +164,9 @@
               break;
           case 37:
               include 'vista/vcsventa.php';
+              break;
+          case 40:
+              include 'vista/vrecibo.php';
               break;
           default:
               include 'vista/vhome.php';

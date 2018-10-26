@@ -54,7 +54,7 @@
                     <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>
                     <td data-title='Teléfono'><?= $cliente->formato_telefono_general($consultacliente[$i]['telefono']) ?></td>
-                    <td data-title='Edición'><a href="7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td data-title='Edición'><a href="7&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             <?php endfor; ?>
 
