@@ -41,7 +41,7 @@
 				</div>
 				<div class="form-group col-md-6 col-lg-6">
 					<br>
-		            <button type="submit" class="btn btn-success">Editar <span class="glyphicon glyphicon-transfer"></span></button>
+		            <button type="submit" class="btn btn-success">Guardar cambios <span class="glyphicon glyphicon-transfer"></span></button>
 					<a href="proveedor" class="btn btn-success">Volver <span class="glyphicon glyphicon-step-backward"></span></a>
 		        </div>
 			</form>

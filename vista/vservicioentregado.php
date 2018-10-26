@@ -78,7 +78,7 @@
 					<td data-title='Costo'>$ <?= number_format($consultaservicioentregado[$i]['costo']) ?></td>
 					<td data-title='Tecnico encargado'><?= $consultaservicioentregado[$i]['tecnico'] ?></td>
           <td data-title='Estado'><?= $consultaservicioentregado[$i]['estado'] ?></td>
-          <td data-title='Edición'><a href="index.php?pag=15&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-default">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+          <td data-title='Edición'><a href="index.php?pag=15&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-default btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

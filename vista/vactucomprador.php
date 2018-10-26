@@ -25,7 +25,7 @@
             <input type="text" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>		
 		<div class="form-group col-md-6 col-lg-6"><br>
-            <input type="submit" class="btn btn-success" value="Editar">
+            <input type="submit" class="btn btn-success" value="Guardar cambios">
 			<a href="index.php?pag=6" class="btn btn-success">Volver</a>
         </div>
 	</form>  

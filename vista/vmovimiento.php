@@ -68,7 +68,7 @@
 					<td><?= $consultamovimiento[$i]['idcodigo'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary btn-xs">Editar <span class="glyphicon glyphicon-edit"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
