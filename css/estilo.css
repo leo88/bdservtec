@@ -380,3 +380,7 @@ input[id^="spoiler"]:checked + label + .spoiler{
 {
     border-left:none;
 }
+
+.brand{
+  max-height: 30px;
+}

@@ -9,7 +9,7 @@
 	<title>Servicio Tecnico</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/servtec_1.ico">
+  <link rel="icon" type="image/png" href="img/st.png">
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
   <?php date_default_timezone_set('America/Bogota'); ?>
 
@@ -39,7 +39,7 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       			</button>
-      			<a class="navbar-brand active" href="home">Wold Comunicaciones Servicio Técnico</a>
+      			<a class="navbar-brand active" href="home"><span><img class="brand" src="img/st.png"></span> Wold Comunicaciones</a>
     		</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
     			<ul class="nav navbar-nav navbar-right">
